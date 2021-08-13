@@ -3,11 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/Dell/OneDrive/Desktop/Master Jam Azan Kl/gittest1/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
       </map>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+=======
+        <entry key="..\:/Users/daniy/Desktop/Software Development/Master Jam Azan KL/gittest1/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+>>>>>>> 2b54f90c6f998f18799ed2ee5feb94b40ea027da
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
