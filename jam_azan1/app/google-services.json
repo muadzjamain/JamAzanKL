@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "333312918392",
+    "project_id": "jamazankldatabase",
+    "storage_bucket": "jamazankldatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333312918392:android:77c547e45e97f4f0f97e8d",
+        "android_client_info": {
+          "package_name": "com.example.jam_azan1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333312918392-pndk9odopcroe1hvn9vfdgv1u7gs9t8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9jbs3IbZCdqNGsOCEHJf3O6hWvdZ4lMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333312918392-pndk9odopcroe1hvn9vfdgv1u7gs9t8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
