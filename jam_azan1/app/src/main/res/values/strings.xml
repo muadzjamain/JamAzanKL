@@ -46,5 +46,14 @@
     <string name="muhammad_fahmi_documentation">Muhammad Fahmi (Documentation)</string>
     <string name="veenah_back_end_programmer1">Veenah (Back End Programmer)</string>
     <string name="tun_ainul_yaqin_front_end_programmer1">Tun Ainul Yaqin (Front End Programmer)</string>
+    <string name="login">Login</string>
+    <string name="name">Name :</string>
+    <string name="email">Email :</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit">EDIT</string>
+    <string name="change_password">CHANGE PASSWORD</string>
+    <string name="tun_ainul_yaqin">Tun Ainul Yaqin</string>
+    <string name="tunyaqin1012_gmail_com">tunyaqin1012@gmail.com</string>
+    <string name="profilepicture1">profilepicture1</string>
 
 </resources>
