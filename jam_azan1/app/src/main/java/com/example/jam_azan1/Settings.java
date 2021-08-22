@@ -1,7 +1,5 @@
 package com.example.jam_azan1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +13,7 @@ public class Settings extends MainActivity implements View.OnClickListener {
         setContentView(R.layout.activity_settings);
 
         Button to_main1 = findViewById(R.id.to_main1);
+        Button to_editprofile = findViewById(R.id.to_editprofile);
         Button to_ubahslide= findViewById(R.id.to_ubahslide);
         Button to_notifikasi1= findViewById(R.id.to_notifikasi1);
         Button to_derma1= findViewById(R.id.to_derma1);
@@ -22,12 +21,11 @@ public class Settings extends MainActivity implements View.OnClickListener {
 
 
         to_main1.setOnClickListener(this);
+        to_editprofile.setOnClickListener(this);
         to_ubahslide.setOnClickListener(this);
         to_notifikasi1.setOnClickListener(this);
         to_derma1.setOnClickListener(this);
         to_tentangkami.setOnClickListener(this);
-
-
 
         }
 
@@ -38,6 +36,10 @@ public class Settings extends MainActivity implements View.OnClickListener {
             case R.id.to_main1:
                 Intent intent1 = new Intent(this, MainActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.to_editprofile:
+                Intent intent9 = new Intent(this, EditProfile.class);
+                startActivity(intent9);
                 break;
             case R.id.to_ubahslide:
                 Intent intent2 = new Intent(this, UbahSlide.class);
