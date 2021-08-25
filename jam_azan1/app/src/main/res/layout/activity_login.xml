@@ -7,7 +7,7 @@
     android:background="@drawable/Log_In">
 
     <TextView
-        android:id="@+id/Email_text"
+        android:id="@+id/Email_login"
         android:layout_width="59dp"
         android:layout_height="26dp"
         android:text="@string/email_text"
@@ -28,39 +28,52 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_textInput_login"
             android:layout_width="360dp"
             android:layout_height="32dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:visibility="invisible" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
         android:layout_width="361dp"
         android:layout_height="33dp"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="364dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_textInput_login"
             android:layout_width="362dp"
-            android:layout_height="36dp" />
+            android:layout_height="36dp"
+            tools:visibility="invisible" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/Password_text"
+        android:id="@+id/Password_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/password"
         android:textColor="#424242"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="334dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471" />
 
-    <TextView
-        android:id="@+id/Login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/log_in"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="572dp" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="348dp"
+        android:layout_height="65dp"
+        android:background="@color/Transparent"
+        android:text="Log In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
