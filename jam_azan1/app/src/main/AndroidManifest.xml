@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jam_azan1">
-        <activity android:name=".Settings"></activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Settings"></activity>
         <activity android:name=".Derma" />
         <activity android:name=".UbahSlide"></activity>
         <activity android:name=".TentangKami"></activity>
         <activity android:name=".Notifikasi"></activity>
+        <activity android:name=".EditProfile"></activity>
 
     </application>
 

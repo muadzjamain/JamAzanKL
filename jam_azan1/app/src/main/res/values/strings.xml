@@ -49,12 +49,17 @@
     <string name="login">Login</string>
     <string name="name">Name :</string>
     <string name="email">Email :</string>
-    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_profil">Edit Profil</string>
     <string name="edit">EDIT</string>
     <string name="change_password">CHANGE PASSWORD</string>
     <string name="tun_ainul_yaqin">Tun Ainul Yaqin</string>
     <string name="tunyaqin1012_gmail_com">tunyaqin1012@gmail.com</string>
     <string name="profilepicture1">profilepicture1</string>
+<<<<<<< HEAD
     <string name="save">SAVE</string>
+=======
+    <string name="to_editprofile">to_editprofile</string>
+    <string name="to_settings4">to_settings4</string>
+>>>>>>> f9f8fdff07c1259dd2a7a97b9f3a403dcc70dd07
 
 </resources>

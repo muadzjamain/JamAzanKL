@@ -12,9 +12,9 @@ public class UbahSlide extends Settings {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubah_slide1);
 
-        Button to_settings = findViewById(R.id.to_settings);
+        Button to_settings4 = findViewById(R.id.to_settings4);
 
-        to_settings.setOnClickListener(new View.OnClickListener() {
+        to_settings4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSettings();
