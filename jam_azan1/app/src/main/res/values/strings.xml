@@ -60,6 +60,9 @@
 =======
     <string name="to_editprofile">to_editprofile</string>
     <string name="to_settings4">to_settings4</string>
->>>>>>> f9f8fdff07c1259dd2a7a97b9f3a403dcc70dd07
+    <string name="log_in">Log In</string>
+    <string name="password">Password</string>
+    <string name="email_text">Email</string>
+    >>>>>>> f9f8fdff07c1259dd2a7a97b9f3a403dcc70dd07
 
 </resources>
