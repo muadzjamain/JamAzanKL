@@ -67,6 +67,12 @@
     <string name="sign_out">Sign Out</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="password">Password</string>
+    <string name="update">UPDATE</string>
+    <string name="new_password">new password</string>
+    <string name="changepassword">Change Password</string>
     >>>>>>> f9f8fdff07c1259dd2a7a97b9f3a403dcc70dd07
 
 </resources>
