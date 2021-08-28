@@ -10,7 +10,7 @@ public class EditProfile extends Settings implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.editprofile);
+        setContentView(R.layout.activity_editprofile);
 
         Button to_settings4 = findViewById(R.id.to_settings4);
         Button to_editprof= findViewById(R.id.to_editprof);
