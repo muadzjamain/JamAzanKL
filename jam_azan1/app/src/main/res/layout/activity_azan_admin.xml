@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/azan_admin">
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="292dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/sila_masukkan_butiran_di_bawah"
+        android:textColor="#FBF9F9"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="274dp"
+        android:layout_height="39dp"
+        android:background="@color/Transparent"
+        android:text="@string/masukkan_data_baru"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.528"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="274dp"
+        android:layout_height="39dp"
+        android:background="@color/Transparent"
+        android:text="@string/padam_data_sedia_ada"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="274dp"
+        android:layout_height="39dp"
+        android:background="@color/Transparent"
+        android:text="@string/lihat_data"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        android:layout_width="356dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="357dp"
+            android:layout_height="41dp"
+            android:hint="@string/pilih_tarikh_cth_30122021"
+            android:visibility="invisible" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="356dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="355dp"
+            android:layout_height="42dp"
+            android:hint="@string/waktu_azan_huruf_besar"
+            android:visibility="invisible" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="356dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="99dp"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="358dp"
+            android:layout_height="43dp"
+            android:hint="@string/tukar_masa_menjadi_cth_21_40"
+            android:visibility="invisible" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="274dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="31dp"
+        android:background="@color/Transparent"
+        android:text="@string/kemaskini_data"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="110dp"
+        android:layout_height="34dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/data_azan"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

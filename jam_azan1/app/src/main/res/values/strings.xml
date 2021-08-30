@@ -73,5 +73,14 @@
     <string name="sila_masukkan_e_mail_anda">Sila masukkan e-mail anda</string>
     <string name="new_password1">New Password</string>
     <string name="name_login">Name</string>
+    <string name="sila_masukkan_butiran_di_bawah">Sila masukkan butiran di bawah</string>
+    <string name="masukkan_data_baru">MASUKKAN DATA BARU</string>
+    <string name="padam_data_sedia_ada">PADAM DATA SEDIA ADA</string>
+    <string name="lihat_data">LIHAT DATA</string>
+    <string name="pilih_tarikh_cth_30122021">Pilih tarikh (Cth: 30122021)</string>
+    <string name="waktu_azan_huruf_besar">Waktu azan (HURUF BESAR)</string>
+    <string name="tukar_masa_menjadi_cth_21_40">Tukar masa menjadi (Cth: 21:40)</string>
+    <string name="kemaskini_data">KEMASKINI DATA</string>
+    <string name="data_azan">DATA AZAN</string>
 
 </resources>
