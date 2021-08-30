@@ -55,9 +55,7 @@
     <string name="tun_ainul_yaqin">Tun Ainul Yaqin</string>
     <string name="tunyaqin1012_gmail_com">tunyaqin1012@gmail.com</string>
     <string name="profilepicture1">profilepicture1</string>
-<<<<<<< HEAD
     <string name="save">SAVE</string>
-=======
     <string name="to_editprofile">to_editprofile</string>
     <string name="to_settings4">to_settings4</string>
     <string name="log_in">Log In</string>
@@ -68,11 +66,11 @@
     <string name="yes">YES</string>
     <string name="no">NO</string>
     <string name="edit_profile">Edit Profile</string>
-    <string name="edit_profile">Edit Profile</string>
-    <string name="password">Password</string>
     <string name="update">UPDATE</string>
     <string name="new_password">new password</string>
     <string name="changepassword">Change Password</string>
-    >>>>>>> f9f8fdff07c1259dd2a7a97b9f3a403dcc70dd07
+    <string name="hantar">Hantar</string>
+    <string name="sila_masukkan_e_mail_anda">Sila masukkan e-mail anda</string>
+    <string name="new_password1">New Password</string>
 
 </resources>

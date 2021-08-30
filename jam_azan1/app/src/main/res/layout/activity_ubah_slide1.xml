@@ -8,7 +8,7 @@
     android:background="@drawable/ubah_slide1">
 
     <Button
-        android:id="@+id/to_settings"
+        android:id="@+id/to_settings4"
         android:layout_width="32dp"
         android:layout_height="36dp"
         android:background="@color/Transparent"

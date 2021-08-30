@@ -14,7 +14,7 @@ public class Settings extends MainActivity implements View.OnClickListener {
 
         Button to_main1 = findViewById(R.id.to_main1);
         Button to_editprofile = findViewById(R.id.to_editprofile);
-        Button to_ubahslide= findViewById(R.id.to_ubahslide);
+        Button to_ubahslide= findViewById(R.id.to_ubahslide1);
         Button to_notifikasi1= findViewById(R.id.to_notifikasi1);
         Button to_derma1= findViewById(R.id.to_derma1);
         Button to_tentangkami= findViewById(R.id.to_tentangkami);
@@ -41,7 +41,7 @@ public class Settings extends MainActivity implements View.OnClickListener {
                 Intent intent9 = new Intent(this, EditProfile.class);
                 startActivity(intent9);
                 break;
-            case R.id.to_ubahslide:
+            case R.id.to_ubahslide1:
                 Intent intent2 = new Intent(this, UbahSlide.class);
                 startActivity(intent2);
                 break;

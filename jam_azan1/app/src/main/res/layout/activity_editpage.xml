@@ -21,7 +21,7 @@
             android:layout_width="311dp"
             android:layout_height="45dp"
             android:hint="@string/name"
-            android:hintTextColor="#616161"
+            android:textColorHint="#616161"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -39,7 +39,6 @@
             android:layout_width="311dp"
             android:layout_height="45dp"
             android:hint="@string/email"
-            android:hintTextColor="#616161"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 

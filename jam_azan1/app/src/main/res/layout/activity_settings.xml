@@ -138,7 +138,7 @@
         app:layout_constraintVertical_bias="0.356" />
 
     <Button
-        android:id="@+id/to_ubahslide"
+        android:id="@+id/to_ubahslide1"
         android:layout_width="102dp"
         android:layout_height="22dp"
         android:background="@color/Transparent"
