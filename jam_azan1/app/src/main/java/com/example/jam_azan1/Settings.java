@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Settings extends MainActivity implements View.OnClickListener {
+public class Settings extends Dashboard implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class Settings extends MainActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.to_main1:
-                Intent intent1 = new Intent(this, MainActivity.class);
+                Intent intent1 = new Intent(this, Dashboard.class);
                 startActivity(intent1);
                 break;
             case R.id.to_editprofile:

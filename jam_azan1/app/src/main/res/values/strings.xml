@@ -72,5 +72,6 @@
     <string name="hantar">Hantar</string>
     <string name="sila_masukkan_e_mail_anda">Sila masukkan e-mail anda</string>
     <string name="new_password1">New Password</string>
+    <string name="name_login">Name</string>
 
 </resources>

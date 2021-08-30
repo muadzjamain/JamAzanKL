@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jam_azan1">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".Dashboard"></activity>
         <activity android:name=".Settings"></activity>
         <activity android:name=".Derma" />
         <activity android:name=".UbahSlide"></activity>
