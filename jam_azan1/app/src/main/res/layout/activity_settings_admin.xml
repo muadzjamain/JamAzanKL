@@ -86,7 +86,7 @@
         android:layout_width="110dp"
         android:layout_height="35dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Data Azan"
+        android:text="@string/data_azan1"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,7 +101,7 @@
         android:layout_width="198dp"
         android:layout_height="32dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Data Kalendar Hijrah"
+        android:text="@string/data_kalendar_hijrah1"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,4 +110,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.801" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/jam_azan"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
 </androidx.constraintlayout.widget.ConstraintLayout>

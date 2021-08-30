@@ -82,5 +82,18 @@
     <string name="tukar_masa_menjadi_cth_21_40">Tukar masa menjadi (Cth: 21:40)</string>
     <string name="kemaskini_data">KEMASKINI DATA</string>
     <string name="data_azan">DATA AZAN</string>
+    <string name="sila_masukkan_butiran_di_bawah">Sila masukkan butiran di bawah</string>
+    <string name="masukkan_data_baru">MASUKKAN DATA BARU</string>
+    <string name="padam_data_sedia_ada">PADAM DATA SEDIA ADA</string>
+    <string name="lihat_data">LIHAT DATA</string>
+    <string name="kemaskini_data">KEMASKINI DATA</string>
+    <string name="kenalan">Kenalan</string>
+    <string name="tarikh_lahir">Tarikh Lahir</string>
+    <string name="data_kalender_hijrah">DATA KALENDER HIJRAH</string>
+    <string name="nama">Nama</string>
+    <string name="data_azan1">Data Azan</string>
+    <string name="data_kalendar_hijrah1">Data Kalendar Hijrah</string>
+    <string name="pilih_tarikh_cth_30122021">Pilih tarikh (Cth: 30122021)</string>
+    <string name="tukar_tarikh_hijrah_menjadi">Tukar tarikh hijrah menjadi</string>
 
 </resources>
