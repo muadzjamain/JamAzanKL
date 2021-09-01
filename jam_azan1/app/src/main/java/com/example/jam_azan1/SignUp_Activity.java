@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class SignUp_Activity extends AppCompatActivity {
+public class SignUp_Activity extends Login_Activity {
 
     private EditText userName, userPassword, userEmail;
     private Button regButton;
@@ -75,7 +75,7 @@ public class SignUp_Activity extends AppCompatActivity {
     }
 
     private Boolean validate(){
-        Boolean result = false;
+        boolean result = false;
 
         String name = userName.getText().toString();
         String password = userPassword.getText().toString();
