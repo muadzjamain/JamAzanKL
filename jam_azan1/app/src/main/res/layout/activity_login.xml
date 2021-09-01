@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Login_Activity"
     android:background="@drawable/log_in">
 
     <TextView
@@ -33,11 +34,12 @@
         app:layout_constraintVertical_bias="0.471" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/btnLogin"
         android:layout_width="333dp"
         android:layout_height="57dp"
         android:background="@color/Transparent"
         android:text="Log In"
+        android:textSize="17sp"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +50,7 @@
     <EditText
         android:id="@+id/etName"
         android:layout_width="319dp"
-        android:layout_height="37dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,9 +60,9 @@
         app:layout_constraintVertical_bias="0.418" />
 
     <EditText
-        android:id="@+id/password_edittext_login"
-        android:layout_width="321dp"
-        android:layout_height="31dp"
+        android:id="@+id/etPassword"
+        android:layout_width="320dp"
+        android:layout_height="43dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,10 +73,10 @@
         app:layout_constraintVertical_bias="0.52" />
 
     <TextView
-        android:id="@+id/text_view_info"
+        android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No of incorrect attempts: "
+        android:text="No of attempts remaining: "
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,5 +84,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.667" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="New User? Sign Up!"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.133" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

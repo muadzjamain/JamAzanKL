@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TentangKami"
+    tools:context=".TentangKami_Activity"
     android:background="@drawable/tentang_kami">
 
 

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class TentangKami extends Settings {
+public class TentangKami_Activity extends Settings_Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class TentangKami extends Settings {
     }
 
     public void openSettings() {
-        Intent intent6 = new Intent(this, Settings.class);
+        Intent intent6 = new Intent(this, Settings_Activity.class);
         startActivity(intent6);
     }
 }

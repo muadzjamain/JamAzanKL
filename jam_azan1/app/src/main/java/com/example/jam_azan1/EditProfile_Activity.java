@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class EditProfile extends Settings implements View.OnClickListener{
+public class EditProfile_Activity extends Settings_Activity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +25,15 @@ public class EditProfile extends Settings implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.to_settings4:
-                Intent intent10 = new Intent(this, Settings.class);
+                Intent intent10 = new Intent(this, Settings_Activity.class);
                 startActivity(intent10);
                 break;
             case R.id.to_editprof:
-                Intent intent11 = new Intent(this, UbahSlide.class);
+                Intent intent11 = new Intent(this, UbahSlide_Activity.class);
                 startActivity(intent11);
                 break;
             case R.id.to_notifikasi1:
-                Intent intent12 = new Intent(this, Notifikasi.class);
+                Intent intent12 = new Intent(this, Notifikasi_Activity.class);
                 startActivity(intent12);
                 break;
         }

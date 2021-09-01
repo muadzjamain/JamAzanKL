@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Dashboard extends Login {
+public class Dashboard_Activity extends Login_Activity {
     private Button to_settings1;
 
     @Override
@@ -24,7 +24,7 @@ public class Dashboard extends Login {
     }
 
     public void openSettings() {
-        Intent intent = new Intent(this, Settings.class);
+        Intent intent = new Intent(this, Settings_Activity.class);
         startActivity(intent);
     }
 }

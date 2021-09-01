@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Notifikasi extends Settings{
+public class Notifikasi_Activity extends Settings_Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class Notifikasi extends Settings{
     }
 
     public void openSettings() {
-        Intent intent7 = new Intent(this, Settings.class);
+        Intent intent7 = new Intent(this, Settings_Activity.class);
         startActivity(intent7);
     }
 }
