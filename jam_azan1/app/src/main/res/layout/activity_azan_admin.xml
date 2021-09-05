@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/azan_admin">
+
     <TextView
         android:id="@+id/textView20"
         android:layout_width="292dp"

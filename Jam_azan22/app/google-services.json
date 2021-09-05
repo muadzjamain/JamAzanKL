@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "942116562982",
+    "project_id": "jam-azan-kl-2",
+    "storage_bucket": "jam-azan-kl-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942116562982:android:5ba84c9a8fc2733b5b9ee7",
+        "android_client_info": {
+          "package_name": "com.example.jam_azan2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942116562982-i0htp6josatjdo20vc23qaqgghqcodte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKBjqMNYiugc4X6fe0l3g7aYifOn5HyOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942116562982-i0htp6josatjdo20vc23qaqgghqcodte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
