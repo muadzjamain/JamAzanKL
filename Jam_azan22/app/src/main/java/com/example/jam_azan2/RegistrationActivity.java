@@ -26,7 +26,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
     // private ImageView userProfilePic;
-    String email, name, age, password;
+    String email, name, password;
     //private FirebaseStorage firebaseStorage;
     //private static int PICK_IMAGE = 123;
     //Uri imagePath;
@@ -79,11 +79,11 @@ public class RegistrationActivity extends AppCompatActivity {
 
                             if(task.isSuccessful()){
                                 sendEmailVerification();
-                                //sendUserData();
-                                //firebaseAuth.signOut();
-                                //Toast.makeText(ActivityRegistration.this, "Successfully Registered, Upload complete!", Toast.LENGTH_SHORT).show();
-                                //finish();
-                                //startActivity(new Intent(ActivityRegistration.this, ActivityLogin.class));
+                                sendUserData();
+                                firebaseAuth.signOut();
+                                Toast.makeText(RegistrationActivity.this, "Successfully Registered, Upload complete!", Toast.LENGTH_SHORT).show();
+                                finish();
+                                startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
                             }else{
                                 Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                             }
@@ -151,7 +151,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private void sendUserData(){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = firebaseDatabase.getReference("UserInfo").child(firebaseAuth.getUid());
+        DatabaseReference myRef = firebaseDatabase.getReference("Users").child(firebaseAuth.getUid());
 //        StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
 //        UploadTask uploadTask = imageReference.putFile(imagePath);
 //        uploadTask.addOnFailureListener(new OnFailureListener() {

@@ -39,7 +39,7 @@
         android:layout_height="57dp"
         android:background="@color/Transparent"
         android:text="Log In"
-        android:textSize="17sp"
+        android:textSize="19sp"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
