@@ -66,8 +66,8 @@ public class DashboardUser extends AppCompatActivity {
             case R.id.logoutMenu: {
                 Logout();
             }
-            case R.id.profileMenu:
-               startActivity(new Intent(DashboardUser.this, ProfileActivity.class));
+//            case R.id.profileMenu:
+//                startActivity(new Intent(DashboardUser.this, ProfileActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
