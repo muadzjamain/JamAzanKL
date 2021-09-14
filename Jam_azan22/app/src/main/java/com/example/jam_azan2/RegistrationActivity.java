@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +26,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private Button regButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
-    // private ImageView userProfilePic;
+    private ImageView userProfilePic;
     String email, name, password;
     //private FirebaseStorage firebaseStorage;
     //private static int PICK_IMAGE = 123;
@@ -70,6 +71,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(validate()){
+                    //Upload data to the database
                     String user_email = userEmail.getText().toString().trim();
                     String user_password = userPassword.getText().toString().trim();
 
@@ -108,7 +110,7 @@ public class RegistrationActivity extends AppCompatActivity {
         userEmail = findViewById(R.id.etUserEmail);
         regButton = findViewById(R.id.btnRegister);
         userLogin = findViewById(R.id.tvUserLogin);
-        // userProfilePic = findViewById(R.id.ivProfilePic);
+        userProfilePic = findViewById(R.id.ivProfile);
     }
 
     private Boolean validate(){
@@ -152,6 +154,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private void sendUserData(){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference("Users").child(firebaseAuth.getUid());
+        UserProfile userProfile= new UserProfile(email, name);
+        myRef.setValue(userProfile);
 //        StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
 //        UploadTask uploadTask = imageReference.putFile(imagePath);
 //        uploadTask.addOnFailureListener(new OnFailureListener() {
