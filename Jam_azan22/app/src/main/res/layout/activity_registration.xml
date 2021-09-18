@@ -115,8 +115,9 @@
         app:layout_constraintVertical_bias="0.94" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivProfile"
         android:layout_width="140dp"
+
         android:layout_height="147dp"
         android:background="#241332"
         app:layout_constraintBottom_toTopOf="@+id/etUserName"
