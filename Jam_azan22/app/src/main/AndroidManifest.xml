@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jam_azan2">
-        <activity android:name=".UpdatePassword"></activity>
+        <activity android:name=".UbahSlide_Activity"></activity>
+        <activity android:name=".TentangKami_Activity" />
+        <activity android:name=".SplashScreen_Activity" />
+        <activity android:name=".AdminSettings_Activity" />
+        <activity android:name=".UserSettings_Activity" />
+        <activity android:name=".Notifikasi_Activity" />
+        <activity android:name=".Derma_Activity" />
+        <activity android:name=".UpdatePassword" />
         <activity android:name=".UpdateProfile" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".PasswordActivity" />

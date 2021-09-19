@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Jam_azan2</string>
+    <string name="app_name">Jam Azan KL (Demo)</string>
+    <string name="bio_tentang_kami"><![CDATA[Jam Azan KL ialah aplikasi mesra muslim yang diterbitkan oleh sekumpulan pelajar universiti pada 9 ogos 2021. Aplikasi ini dapat membantu pengguna dengan memberi 5 notifikasi waktu solat sehari. Selain itu, Aplikasi ini juga dilengkapi dengan tarikh yang berpandukan kalendar hijrah & mempunyai platform untuk memudahkan pengguna memberi sedekah atas talian kepada Surau Saidina Abu Bakar As-Siddiq untuk menaikkan ekonomi surau tersebut. Terima kasih kerana memuat turun applikasi ini.]]></string>
 </resources>

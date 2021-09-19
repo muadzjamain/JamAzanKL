@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateProfile">
+    tools:context=".UpdateProfile"
+    android:background="@drawable/editpage">
 
     <ImageView
         android:id="@+id/ivProfileUpdate"
@@ -12,9 +13,10 @@
         android:layout_height="170dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053"
+        app:layout_constraintVertical_bias="0.138"
         app:srcCompat="@drawable/iconprofilepic" />
 
     <EditText
@@ -23,6 +25,7 @@
         android:layout_height="46dp"
         android:ems="10"
         android:hint="Username"
+        android:textColorHint="@color/white"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +39,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:hint="Email Address"
+        android:textColorHint="@color/white"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,12 +50,16 @@
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
+        android:layout_width="245dp"
+        android:layout_height="43dp"
+        android:background="@color/Transparent"
+        android:text="SAVE"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailUpdate" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844" />
 </androidx.constraintlayout.widget.ConstraintLayout>

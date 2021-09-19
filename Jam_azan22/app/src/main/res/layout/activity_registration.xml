@@ -67,7 +67,7 @@
     <EditText
         android:id="@+id/etUserName"
         android:layout_width="326dp"
-        android:layout_height="38dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +80,7 @@
     <EditText
         android:id="@+id/etUserEmail"
         android:layout_width="329dp"
-        android:layout_height="35dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,7 +92,7 @@
     <EditText
         android:id="@+id/etUserPassword"
         android:layout_width="326dp"
-        android:layout_height="38dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
