@@ -116,17 +116,34 @@
 
     <ImageView
         android:id="@+id/ivProfile"
-        android:layout_width="140dp"
+        android:layout_width="110dp"
 
-        android:layout_height="147dp"
+        android:layout_height="110dp"
         android:background="#241332"
         app:layout_constraintBottom_toTopOf="@+id/etUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311"
+        app:layout_constraintVertical_bias="0.251"
         app:srcCompat="@drawable/iconprofilepic" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Profile Photo"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <ImageView
+        android:id="@+id/desplay"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:srcCompat="@drawable/ss"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="116dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
