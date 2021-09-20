@@ -53,7 +53,7 @@ public class UpdateProfile extends AppCompatActivity {
         newUserEmail = findViewById(R.id.etEmailUpdate);
         save = findViewById(R.id.btnSave);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         firebaseAuth= FirebaseAuth.getInstance();
         firebaseDatabase= FirebaseDatabase.getInstance();

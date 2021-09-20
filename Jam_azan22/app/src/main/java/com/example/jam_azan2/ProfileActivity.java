@@ -39,20 +39,20 @@ public class ProfileActivity extends AppCompatActivity {
         profilePic = findViewById(R.id.ivProfile);
         profileName = findViewById(R.id.tvProfileName);
         profileEmail = findViewById(R.id.tvProfileEmail);
-        profileUpdate = findViewById(R.id.btnProfileUpdate);
-        changePassword= findViewById(R.id.btnChangePassword);
+        profileUpdate = (Button) findViewById(R.id.btnProfileUpdate);
+        changePassword= (Button) findViewById(R.id.btnChangePassword);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         firebaseAuth= FirebaseAuth.getInstance();
         firebaseDatabase= FirebaseDatabase.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
 
 
-        DatabaseReference databaseReference= firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference databaseReference= firebaseDatabase.getReference(firebaseAuth.getCurrentUser().getUid());
 
         StorageReference storageReference = firebaseStorage.getReference();
-        storageReference.child(firebaseAuth.getUid()).child("Images/Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageReference.child(firebaseAuth.getCurrentUser().getUid()).child("Images/Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
 
@@ -74,7 +74,7 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
-
+//
         profileUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +88,7 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(ProfileActivity.this,UpdatePassword.class));
             }
         });
-    }
+//    }
 
 //    @Override
 //    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -97,7 +97,7 @@ public class ProfileActivity extends AppCompatActivity {
 //                onBackPressed();
 //        }
 //        return super.onOptionsItemSelected(item);
-//    }
+    }
 }
 
 
