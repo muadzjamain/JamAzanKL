@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -14,6 +16,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class DashboardUser extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
+    private Button to_settings1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +49,27 @@ public class DashboardUser extends AppCompatActivity {
 //        });
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        to_settings1 = (Button) findViewById(R.id.to_settings1);
+        to_settings1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSettings();
+            }
+        });
     }
 
-    private void Logout() {
-        firebaseAuth.signOut();
-        finish();
-        startActivity(new Intent(DashboardUser.this, MainActivity.class));
+
+    public void openSettings() {
+        Intent intent = new Intent(this, UserSettings_Activity.class);
+        startActivity(intent);
     }
+
+//    private void Logout() {
+//        firebaseAuth.signOut();
+//        finish();
+//        startActivity(new Intent(DashboardUser.this, MainActivity.class));
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,16 +77,16 @@ public class DashboardUser extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.logoutMenu: {
-                Logout();
-            }
-            case R.id.profileMenu:
-                startActivity(new Intent(DashboardUser.this, ProfileActivity.class));
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//
+//        switch (item.getItemId()) {
+//            case R.id.logoutMenu: {
+//                Logout();
+//            }
+//            case R.id.profileMenu:
+//                startActivity(new Intent(DashboardUser.this, ProfileActivity.class));
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }

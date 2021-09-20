@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <TextView
-        android:id="@+id/notifikasi"
+        android:id="@+id/to_notifikasi1"
         android:layout_width="252dp"
         android:layout_height="44dp"
         android:fontFamily="sans-serif-medium"

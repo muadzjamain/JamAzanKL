@@ -37,7 +37,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/tentang"
+        android:id="@+id/to_tentangkami"
         android:layout_width="164dp"
         android:layout_height="41dp"
         android:fontFamily="sans-serif-medium"
@@ -52,7 +52,7 @@
         app:layout_constraintVertical_bias="0.624" />
 
     <TextView
-        android:id="@+id/dermamasjid"
+        android:id="@+id/to_derma2"
         android:layout_width="138dp"
         android:layout_height="30dp"
         android:fontFamily="sans-serif-medium"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.528" />
 
     <TextView
-        android:id="@+id/notifikasi"
+        android:id="@+id/to_notifikasi1"
         android:layout_width="130dp"
         android:layout_height="31dp"
         android:fontFamily="sans-serif-medium"
@@ -82,7 +82,7 @@
         app:layout_constraintVertical_bias="0.439" />
 
     <TextView
-        android:id="@+id/ubahslide"
+        android:id="@+id/to_ubahslide"
         android:layout_width="115dp"
         android:layout_height="31dp"
         android:fontFamily="sans-serif-medium"
@@ -97,7 +97,7 @@
         app:layout_constraintVertical_bias="0.356" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/to_editprofile1"
         android:layout_width="115dp"
         android:layout_height="31dp"
         android:text="Edit Profil"
