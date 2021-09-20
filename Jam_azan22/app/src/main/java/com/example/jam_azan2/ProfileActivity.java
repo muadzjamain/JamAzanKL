@@ -3,9 +3,13 @@ package com.example.jam_azan2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,8 +18,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -59,6 +65,27 @@ public class ProfileActivity extends AppCompatActivity {
 
         DatabaseReference myRef = database.getReference("Users/" + UID);
 
+        StorageReference mImageRef = FirebaseStorage.getInstance().getReference(firebaseAuth.getUid()).child("Images").child("Profile Pic");
+        final long ONE_MEGABYTE = 1024 * 1024;
+
+        mImageRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                Bitmap bm = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                DisplayMetrics dm = new DisplayMetrics();
+                getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+                profilePic.setMinimumHeight(dm.heightPixels);
+                profilePic.setMinimumWidth(dm.widthPixels);
+                profilePic.setImageBitmap(bm);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle any errors
+            }
+        });
+
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -79,32 +106,6 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-//        DatabaseReference databaseReference= firebaseDatabase.getReference(firebaseAuth.getCurrentUser().getUid());
-
-//        StorageReference storageReference = firebaseStorage.getReference();
-//        storageReference.child(firebaseAuth.getCurrentUser().getUid()).child("Images/Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-//            @Override
-//            public void onSuccess(Uri uri) {
-//
-//            }
-//        });
-//
-//        databaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-//                profileName.setText("Name: " + userProfile.getUserName());
-//                profileEmail.setText("Email: " + userProfile.getUserEmail());
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                Toast.makeText(ProfileActivity.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
-//
         databaseReference.child("Users").child(UID).get().addOnCompleteListener(task -> {
             if (!task.isSuccessful()) {
                 Log.e("firebase", "Error getting data", task.getException());
