@@ -7,6 +7,19 @@
     tools:context=".UpdateProfile"
     android:background="@drawable/editpage">
 
+    <Button
+        android:id="@+id/to_settings4"
+        android:layout_width="32dp"
+        android:layout_height="36dp"
+        android:background="@color/Transparent"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
+
     <ImageView
         android:id="@+id/ivProfileUpdate"
         android:layout_width="170dp"
@@ -35,18 +48,17 @@
 
     <EditText
         android:id="@+id/etEmailUpdate"
-        android:layout_width="272dp"
-        android:layout_height="45dp"
+        android:layout_width="279dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:hint="Email Address"
-        android:textColorHint="@color/white"
         android:inputType="textPersonName"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameUpdate"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.126" />
 
     <Button
         android:id="@+id/btnSave"
@@ -62,4 +74,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.844" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.49" />
 </androidx.constraintlayout.widget.ConstraintLayout>

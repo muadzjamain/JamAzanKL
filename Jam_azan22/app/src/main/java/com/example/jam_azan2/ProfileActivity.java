@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -22,14 +23,21 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import static android.content.ContentValues.TAG;
+
+import java.util.Objects;
 
 public class ProfileActivity extends AppCompatActivity {
     private ImageView profilePic;
     private TextView profileName, profileEmail;
-    private Button profileUpdate, changePassword;
+    private Button profileUpdate, changePassword, toSettings;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseStorage firebaseStorage;
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://jam-azan-kl-2-default-rtdb.asia-southeast1.firebasedatabase.app/");
+    private String UID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +47,9 @@ public class ProfileActivity extends AppCompatActivity {
         profilePic = findViewById(R.id.ivProfile);
         profileName = findViewById(R.id.tvProfileName);
         profileEmail = findViewById(R.id.tvProfileEmail);
-        profileUpdate = (Button) findViewById(R.id.btnProfileUpdate);
-        changePassword= (Button) findViewById(R.id.btnChangePassword);
+        profileUpdate = findViewById(R.id.btnProfileUpdate);
+        changePassword= findViewById(R.id.btnChangePassword);
+        toSettings = findViewById(R.id.to_settings4);
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -48,33 +57,82 @@ public class ProfileActivity extends AppCompatActivity {
         firebaseDatabase= FirebaseDatabase.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
 
+        DatabaseReference myRef = database.getReference("Users/" + UID);
 
-        DatabaseReference databaseReference= firebaseDatabase.getReference(firebaseAuth.getCurrentUser().getUid());
-
-        StorageReference storageReference = firebaseStorage.getReference();
-        storageReference.child(firebaseAuth.getCurrentUser().getUid()).child("Images/Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        // Read from the database
+        myRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onSuccess(Uri uri) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                UserProfile user = dataSnapshot.getValue(UserProfile.class);
+                assert user != null;
+                profileName.setText("Name:  "+ user.getUserName());
+                profileEmail.setText("Email:  " + user.getUserEmail());
 
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-                profileName.setText("Name: " + userProfile.getUserName());
-                profileEmail.setText("Email: " + userProfile.getUserEmail());
+//        DatabaseReference databaseReference= firebaseDatabase.getReference(firebaseAuth.getCurrentUser().getUid());
 
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(ProfileActivity.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
-
-            }
-        });
+//        StorageReference storageReference = firebaseStorage.getReference();
+//        storageReference.child(firebaseAuth.getCurrentUser().getUid()).child("Images/Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+//            @Override
+//            public void onSuccess(Uri uri) {
 //
+//            }
+//        });
+//
+//        databaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
+//                profileName.setText("Name: " + userProfile.getUserName());
+//                profileEmail.setText("Email: " + userProfile.getUserEmail());
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                Toast.makeText(ProfileActivity.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
+//
+        databaseReference.child("Users").child(UID).get().addOnCompleteListener(task -> {
+            if (!task.isSuccessful()) {
+                Log.e("firebase", "Error getting data", task.getException());
+            } else {
+                //Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                UserProfile userData = Objects.requireNonNull(task.getResult()).getValue(UserProfile.class);
+                assert userData != null;
+                profileName.setText("Name:  "+ userData.getUserName());
+                profileEmail.setText("Email:  "+ userData.getUserEmail());
+                //add get profile image example provided below
+                //profilePicture.setImageURI(userData.getProfilePicture());
+                //to use this, u need to modify usermodel class by adding this
+                //private Uri profilePicture;
+                //public usermodel(....., Uri profilePicture){
+                //......;
+                // this.profilePicture = profilePicture;
+                //}
+                //public Uri getProfilePicture(){ return profilePicture;}
+            }
+        });
+
+        toSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         profileUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +143,7 @@ public class ProfileActivity extends AppCompatActivity {
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ProfileActivity.this,UpdatePassword.class));
+                startActivity(new Intent(ProfileActivity.this, UpdatePassword.class));
             }
         });
 //    }
