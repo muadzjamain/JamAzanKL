@@ -102,13 +102,13 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
+                Log.w(TAG, "Gagal untuk membaca data", error.toException());
             }
         });
 
         databaseReference.child("Users").child(UID).get().addOnCompleteListener(task -> {
             if (!task.isSuccessful()) {
-                Log.e("firebase", "Error getting data", task.getException());
+                Log.e("firebase", "Gagal untuk dapatkan data", task.getException());
             } else {
                 //Log.d("firebase", String.valueOf(task.getResult().getValue()));
                 UserProfile userData = Objects.requireNonNull(task.getResult()).getValue(UserProfile.class);

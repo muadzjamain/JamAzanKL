@@ -48,10 +48,10 @@ public class UpdatePassword extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(UpdatePassword.this, "Password Changed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdatePassword.this, "Kata Laluan Telah Diubah", Toast.LENGTH_SHORT).show();
                             finish();
                         }else{
-                            Toast.makeText(UpdatePassword.this, "Password Update Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdatePassword.this, "Kata Laluan Gagal Diubah", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

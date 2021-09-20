@@ -35,17 +35,17 @@ public class PasswordActivity extends AppCompatActivity {
                 String useremail = passwordEmail.getText().toString().trim();
 
                 if(useremail.equals("")){
-                    Toast.makeText(PasswordActivity.this, "Please enter your registered email ID", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PasswordActivity.this, "Sila masukkan ID e-mel berdaftar anda", Toast.LENGTH_SHORT).show();
                 }else{
                     firebaseAuth.sendPasswordResetEmail(useremail).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(PasswordActivity.this, "Password reset email sent!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PasswordActivity.this, "E-mel tetapan semula kata laluan dihantar!", Toast.LENGTH_SHORT).show();
                                 finish();
                                 startActivity(new Intent(PasswordActivity.this, MainActivity.class));
                             }else{
-                                Toast.makeText(PasswordActivity.this, "Error in sending password reset email", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PasswordActivity.this, "Penghantaran e-mel tetapan semula kata laluan gagal", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

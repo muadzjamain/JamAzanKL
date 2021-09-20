@@ -149,7 +149,7 @@ public class UpdateProfile extends AppCompatActivity {
                 String name = newUserName.getText().toString();
                 String email = newUserEmail.getText().toString();
 
-                progressDialog.setMessage("Profile Pic is uploading..");
+                progressDialog.setMessage("Gambar Profil sedang dimuat naik..");
                 progressDialog.show();
 
 
@@ -162,11 +162,11 @@ public class UpdateProfile extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(UpdateProfile.this,"Email Update", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateProfile.this,"Email Telah Dikemaskini", Toast.LENGTH_SHORT).show();
                             sendEmailVerification();
                             //finish();
                         }else{
-                            Toast.makeText(UpdateProfile.this,"Email Update Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateProfile.this,"Email Gagal Dikemaskini", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -178,13 +178,13 @@ public class UpdateProfile extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         progressDialog.dismiss();
-                        Toast.makeText(UpdateProfile.this,"Upload Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UpdateProfile.this,"Muat Naik Gagal", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         progressDialog.dismiss();
-                        Toast.makeText(UpdateProfile.this,"Upload Successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UpdateProfile.this,"Muat Naik Berjaya", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(UpdateProfile.this, ProfileActivity.class));
                     }
                 });

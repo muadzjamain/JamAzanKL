@@ -94,7 +94,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                 sendUserData();
                                 //firebaseAuth.signOut();
                             }else{
-                                Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegistrationActivity.this, "Daftar Masuk Gagal", Toast.LENGTH_SHORT).show();
                             }
 
                         }
@@ -129,7 +129,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         if(name.isEmpty() || password.isEmpty() || email.isEmpty() || imagePath == null){
-            Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT). show();
+            Toast.makeText(this, "Sila masukkan semua butiran", Toast.LENGTH_SHORT). show();
         }else{
             result = true;
         }
@@ -146,10 +146,10 @@ public class RegistrationActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
                         //sendUserData();
-                        Toast.makeText(RegistrationActivity.this, "Successfully Registered, Verification mail sent!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistrationActivity.this, "Pendaftaran berjaya, Email pengesahan telah dihantar!", Toast.LENGTH_SHORT).show();
                         //firebaseAuth.signOut();
                     }else{
-                        Toast.makeText(RegistrationActivity.this, "Verification mail has'nt been sent!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistrationActivity.this, "Email pengesahan belum dihantar!", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -166,14 +166,14 @@ public class RegistrationActivity extends AppCompatActivity {
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(RegistrationActivity.this, "Upload failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegistrationActivity.this, "Muat naik gagal", Toast.LENGTH_SHORT).show();
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 firebaseAuth.signOut();
-                Toast.makeText(RegistrationActivity.this, "Upload successful", Toast.LENGTH_SHORT).show();
-                Toast.makeText(RegistrationActivity.this, "Successfully Registered, Upload complete!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegistrationActivity.this, "Muat naik berjaya", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegistrationActivity.this, "Pendaftaran berjaya dimuat naik!", Toast.LENGTH_SHORT).show();
                 finish();
                 startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
 
