@@ -65,11 +65,11 @@ public class DashboardUser extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    private void Logout() {
-//        firebaseAuth.signOut();
-//        finish();
-//        startActivity(new Intent(DashboardUser.this, MainActivity.class));
-//    }
+    private void Logout() {
+        firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(DashboardUser.this, MainActivity.class));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,16 +77,16 @@ public class DashboardUser extends AppCompatActivity {
         return true;
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//
-//        switch (item.getItemId()) {
-//            case R.id.logoutMenu: {
-//                Logout();
-//            }
-//            case R.id.profileMenu:
-//                startActivity(new Intent(DashboardUser.this, ProfileActivity.class));
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.logoutMenu: {
+                Logout();
+            }
+            case R.id.profileMenu:
+                startActivity(new Intent(DashboardUser.this, ProfileActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
