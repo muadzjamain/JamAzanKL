@@ -47,7 +47,7 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode,  Intent data) {
         if(requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null){
             imagePath = data.getData();
-           try {
+            try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
                 userProfilePic.setImageBitmap(bitmap);
             } catch (IOException e) {
@@ -92,10 +92,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 sendEmailVerification();
                                 sendUserData();
-                                firebaseAuth.signOut();
-                                Toast.makeText(RegistrationActivity.this, "Successfully Registered, Upload complete!", Toast.LENGTH_SHORT).show();
-                                finish();
-                                startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+                                //firebaseAuth.signOut();
                             }else{
                                 Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                             }
@@ -148,11 +145,9 @@ public class RegistrationActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
-                        sendUserData();
+                        //sendUserData();
                         Toast.makeText(RegistrationActivity.this, "Successfully Registered, Verification mail sent!", Toast.LENGTH_SHORT).show();
-                        firebaseAuth.signOut();
-                        finish();
-                        startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+                        //firebaseAuth.signOut();
                     }else{
                         Toast.makeText(RegistrationActivity.this, "Verification mail has'nt been sent!", Toast.LENGTH_SHORT).show();
                     }
@@ -163,10 +158,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private void sendUserData(){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = firebaseDatabase.getReference("Users").child(firebaseAuth.getUid());
+        DatabaseReference myRef = firebaseDatabase.getReference("Users").child(firebaseAuth.getCurrentUser().getUid());
         UserProfile userProfile= new UserProfile(email, name);
         myRef.setValue(userProfile);
-        StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
+        StorageReference imageReference = storageReference.child(firebaseAuth.getCurrentUser().getUid()).child("Images").child("Profile Pic");
         UploadTask uploadTask = imageReference.putFile(imagePath);
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
@@ -176,7 +171,12 @@ public class RegistrationActivity extends AppCompatActivity {
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                firebaseAuth.signOut();
                 Toast.makeText(RegistrationActivity.this, "Upload successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegistrationActivity.this, "Successfully Registered, Upload complete!", Toast.LENGTH_SHORT).show();
+                finish();
+                startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+
             }
         });
         UserProfile UserProfile = new UserProfile(email, name);
