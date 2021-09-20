@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -39,7 +40,8 @@ import java.util.Objects;
 
 public class UpdateProfile extends AppCompatActivity {
 
-    private EditText newUserName, newUserEmail, newUserMobile;
+    private EditText newUserName;
+    private TextView newUserEmail;
     private Button save;
     private ImageView profilePic;
 
@@ -53,7 +55,7 @@ public class UpdateProfile extends AppCompatActivity {
     private static int PICK_IMAGE = 123;
     Uri imagePath;
 
-    String newName, newEmail, newMobile, newImage;
+    String newName, newEmail, newImage;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -75,7 +77,7 @@ public class UpdateProfile extends AppCompatActivity {
         setContentView(R.layout.activity_update_profile);
 
         newUserName = (EditText)findViewById(R.id.etNameUpdate);
-        newUserEmail = (EditText)findViewById(R.id.etEmailUpdate);
+        newUserEmail = (TextView)findViewById(R.id.etEmailUpdate);
         save = (Button)findViewById(R.id.btnSave);
         profilePic = (ImageView)findViewById(R.id.ivProfileUpdate);
         progressDialog = new ProgressDialog(this);

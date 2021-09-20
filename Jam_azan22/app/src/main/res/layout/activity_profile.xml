@@ -7,6 +7,34 @@
     android:background="@drawable/editprofile"
     tools:context=".ProfileActivity">
 
+    <TextView
+        android:id="@+id/tvProfileName3"
+        android:layout_width="111dp"
+        android:layout_height="30dp"
+        android:text="Email"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <TextView
+        android:id="@+id/tvProfileName2"
+        android:layout_width="111dp"
+        android:layout_height="30dp"
+        android:text="Nama"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
+
     <Button
         android:id="@+id/to_settings4"
         android:layout_width="32dp"
@@ -22,11 +50,11 @@
 
     <TextView
         android:id="@+id/editprofile"
-        android:layout_width="152dp"
+        android:layout_width="97dp"
         android:layout_height="33dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="Edit Profile"
+        android:text="Profil"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +62,7 @@
         app:layout_constraintHorizontal_bias="0.170"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0158"/>
+        app:layout_constraintVertical_bias="0.0158" />
 
     <ImageView
         android:id="@+id/ivProfile"
@@ -52,7 +80,7 @@
         android:id="@+id/tvProfileName"
         android:layout_width="348dp"
         android:layout_height="37dp"
-        android:text="Name :"
+        android:text="Nama"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,28 +95,27 @@
         android:layout_width="348dp"
         android:layout_height="37dp"
         android:layout_marginTop="68dp"
-        android:text="Email :"
+        android:text="Email"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintVertical_bias="0.581" />
 
     <Button
         android:id="@+id/btnProfileUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="233dp"
+        android:layout_height="51dp"
         android:background="@color/Transparent"
-        android:text="Edit Profile"
+        android:text="Kemaskini Profil"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.865" />
@@ -98,15 +125,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/Transparent"
-        android:text="Change Password"
-        android:textColor="@color/black"
+        android:text="Ubah Kata Laluan"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintVertical_bias="0.955" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

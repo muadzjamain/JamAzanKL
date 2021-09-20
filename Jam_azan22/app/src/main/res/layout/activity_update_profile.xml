@@ -7,10 +7,26 @@
     tools:context=".UpdateProfile"
     android:background="@drawable/editpage">
 
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="198dp"
+        android:layout_height="38dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Kemaskini Profil"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013" />
+
     <Button
         android:id="@+id/to_settings4"
         android:layout_width="32dp"
-        android:layout_height="36dp"
+        android:layout_height="32dp"
         android:background="@color/Transparent"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,11 +38,10 @@
 
     <ImageView
         android:id="@+id/ivProfileUpdate"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.138"
@@ -37,35 +52,35 @@
         android:layout_width="279dp"
         android:layout_height="46dp"
         android:ems="10"
-        android:hint="Username"
-        android:textColorHint="@color/white"
+        android:hint="Nama"
         android:inputType="textPersonName"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivProfileUpdate"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412" />
 
-    <EditText
+    <TextView
         android:id="@+id/etEmailUpdate"
         android:layout_width="279dp"
         android:layout_height="46dp"
         android:ems="10"
-        android:hint="Email Address"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/white"
+        android:hint="Email"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNameUpdate"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.54" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="245dp"
         android:layout_height="43dp"
         android:background="@color/Transparent"
-        android:text="SAVE"
+        android:text="SIMPAN"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -79,14 +94,14 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="Nama"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.369" />
+        app:layout_constraintVertical_bias="0.376" />
 
     <TextView
         android:id="@+id/textView13"
@@ -96,8 +111,32 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
+        app:layout_constraintVertical_bias="0.499" />
+
+    <ImageView
+        android:id="@+id/desplay2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfileUpdate"
+        app:layout_constraintEnd_toEndOf="@+id/ivProfileUpdate"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ivProfileUpdate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ss" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubah Gambar Profil"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
 </androidx.constraintlayout.widget.ConstraintLayout>

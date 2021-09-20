@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="Full Name"
+        android:text="Nama Penuh"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,20 +40,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="Password"
+        android:text="Kata Laluan"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.513" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="345dp"
         android:layout_height="56dp"
-        android:text="Create Account"
+        android:text="Cipta Akaun Baharu"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:background="@color/Transparent"
@@ -105,7 +105,7 @@
         android:id="@+id/tvUserLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already Signed in?Log in!"
+        android:text="Sudah Datar?Log Masuk!"
         android:textColor="@color/white"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -133,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Upload Profile Photo"
+        android:text="Muat Naik Gambar Profil"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/etUserName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,7 +141,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ivProfile"
         app:layout_constraintVertical_bias="0.063" />
 
-    <ImageView
+     <ImageView
         android:id="@+id/desplay"
         android:layout_width="32dp"
         android:layout_height="32dp"

@@ -115,7 +115,7 @@
         android:id="@+id/to_editprofile"
         android:layout_width="115dp"
         android:layout_height="31dp"
-        android:text="Edit Profil"
+        android:text="Profil"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

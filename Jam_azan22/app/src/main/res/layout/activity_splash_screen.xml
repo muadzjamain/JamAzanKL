@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="A Fresh Start for Good Deeds"
+        android:text="Permulaan Baharu untuk Perbuatan Baik"
         android:textColor="#F8F4F4"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

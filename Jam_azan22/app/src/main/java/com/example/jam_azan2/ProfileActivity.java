@@ -94,8 +94,8 @@ public class ProfileActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 UserProfile user = dataSnapshot.getValue(UserProfile.class);
                 assert user != null;
-                profileName.setText("Name:  "+ user.getUserName());
-                profileEmail.setText("Email:  " + user.getUserEmail());
+                profileName.setText(user.getUserName());
+                profileEmail.setText(user.getUserEmail());
 
             }
 
@@ -113,8 +113,8 @@ public class ProfileActivity extends AppCompatActivity {
                 //Log.d("firebase", String.valueOf(task.getResult().getValue()));
                 UserProfile userData = Objects.requireNonNull(task.getResult()).getValue(UserProfile.class);
                 assert userData != null;
-                profileName.setText("Name:  "+ userData.getUserName());
-                profileEmail.setText("Email:  "+ userData.getUserEmail());
+                profileName.setText(userData.getUserName());
+                profileEmail.setText(userData.getUserEmail());
                 //add get profile image example provided below
                 //profilePicture.setImageURI(userData.getProfilePicture());
                 //to use this, u need to modify usermodel class by adding this
