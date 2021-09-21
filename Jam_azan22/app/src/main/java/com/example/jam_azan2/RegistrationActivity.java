@@ -172,7 +172,6 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 firebaseAuth.signOut();
-                Toast.makeText(RegistrationActivity.this, "Muat naik berjaya", Toast.LENGTH_SHORT).show();
                 Toast.makeText(RegistrationActivity.this, "Pendaftaran berjaya dimuat naik!", Toast.LENGTH_SHORT).show();
                 finish();
                 startActivity(new Intent(RegistrationActivity.this, MainActivity.class));

@@ -22,9 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText Name;
     private EditText Password;
-    private TextView Info;
     private Button Login;
-    private int counter = 5;
+    private int counter = 6;
     private TextView userRegistration;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
@@ -37,12 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
         Name = (EditText) findViewById(R.id.etName);
         Password = (EditText) findViewById(R.id.etPassword);
-        Info = (TextView) findViewById(R.id.tvInfo);
         Login = (Button) findViewById(R.id.btnLogin);
         userRegistration = (TextView) findViewById(R.id.tvRegister);
         forgotPassword = (TextView)findViewById(R.id.tvForgotPassword);
 
-        Info.setText("Bil percubaan yang tinggal: 5");
 
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
@@ -78,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void validate(String userName, String userPassword) {
 
+        progressDialog.setMessage("You can subscribe to my channel until you are verified!");
+        progressDialog.show();
+
         firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(MainActivity.this, "Log Masuk Gagal", Toast.LENGTH_SHORT).show();
                     counter--;
-                    Info.setText("Bil percubaan yang tinggal: " + counter);
+                    Toast.makeText(MainActivity.this, "Bil percubaan yang tinggal: " + counter, Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                     if (counter == 0) {
                         Login.setEnabled(false);

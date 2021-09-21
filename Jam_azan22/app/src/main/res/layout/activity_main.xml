@@ -45,8 +45,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfo"
-        app:layout_constraintVertical_bias="0.361" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.571" />
 
     <EditText
         android:id="@+id/etName"
@@ -74,43 +74,30 @@
         app:layout_constraintVertical_bias="0.52" />
 
     <TextView
-        android:id="@+id/tvInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bil percubaan yang tinggal: "
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
-
-    <TextView
         android:id="@+id/tvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="37dp"
         android:text="Pengguna Baru? Daftar Masuk!"
         android:textColor="@color/white"
-        android:textSize="19sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Terlupa Kata Laluan"
-        android:textSize="19sp"
+        android:text="Terlupa Kata Laluan?"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.604" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

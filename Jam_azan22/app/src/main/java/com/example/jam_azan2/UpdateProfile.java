@@ -11,8 +11,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,8 +33,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
-import java.util.Objects;
 
 public class UpdateProfile extends AppCompatActivity {
 
@@ -77,7 +76,7 @@ public class UpdateProfile extends AppCompatActivity {
         setContentView(R.layout.activity_update_profile);
 
         newUserName = (EditText)findViewById(R.id.etNameUpdate);
-        newUserEmail = (TextView)findViewById(R.id.etEmailUpdate);
+        newUserEmail = (TextView)findViewById(R.id.tvEmailUpdate1);
         save = (Button)findViewById(R.id.btnSave);
         profilePic = (ImageView)findViewById(R.id.ivProfileUpdate);
         progressDialog = new ProgressDialog(this);
@@ -153,7 +152,7 @@ public class UpdateProfile extends AppCompatActivity {
                 progressDialog.show();
 
 
-                UserProfile userProfile = new UserProfile(name, email);
+                UserProfile userProfile = new UserProfile(email, name);
                 databaseReference.setValue(userProfile);
 
                 String userEmailNew = newUserEmail.getText().toString();
