@@ -130,7 +130,7 @@ public class ProfileActivity extends AppCompatActivity {
         toSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                startActivity(new Intent(ProfileActivity.this, UserSettings_Activity.class));
             }
         });
 

@@ -41,7 +41,7 @@ public class UpdateProfile extends AppCompatActivity {
 
     private EditText newUserName;
     private TextView newUserEmail;
-    private Button save;
+    private Button save, toSettings;
     private ImageView profilePic;
 
     private FirebaseAuth firebaseAuth;
@@ -78,6 +78,7 @@ public class UpdateProfile extends AppCompatActivity {
         newUserName = (EditText)findViewById(R.id.etNameUpdate);
         newUserEmail = (TextView)findViewById(R.id.tvEmailUpdate1);
         save = (Button)findViewById(R.id.btnSave);
+        toSettings = (Button)findViewById(R.id.to_settings4);
         profilePic = (ImageView)findViewById(R.id.ivProfileUpdate);
         progressDialog = new ProgressDialog(this);
 
@@ -110,6 +111,13 @@ public class UpdateProfile extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception exception) {
                 // Handle any errors
+            }
+        });
+
+        toSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
 
@@ -161,11 +169,11 @@ public class UpdateProfile extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(UpdateProfile.this,"Email Telah Dikemaskini", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateProfile.this,"Butiran Telah Dikemaskini", Toast.LENGTH_SHORT).show();
                             sendEmailVerification();
                             //finish();
                         }else{
-                            Toast.makeText(UpdateProfile.this,"Email Gagal Dikemaskini", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateProfile.this,"Butiran Gagal Dikemaskini", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
