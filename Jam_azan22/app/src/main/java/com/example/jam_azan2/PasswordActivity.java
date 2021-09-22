@@ -18,6 +18,7 @@ public class PasswordActivity extends AppCompatActivity {
 
     private EditText passwordEmail;
     private Button resetPassword;
+    private Button ToMain;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -27,6 +28,7 @@ public class PasswordActivity extends AppCompatActivity {
 
         passwordEmail = (EditText)findViewById(R.id.etPasswordEmail);
         resetPassword = (Button)findViewById(R.id.btnPasswordReset);
+        ToMain = (Button)findViewById(R.id.to_main);
         firebaseAuth = FirebaseAuth.getInstance();
 
         resetPassword.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +52,12 @@ public class PasswordActivity extends AppCompatActivity {
                         }
                     });
                 }
+            }
+        });
+        ToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
     }

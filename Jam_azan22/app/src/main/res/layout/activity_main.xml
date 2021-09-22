@@ -7,32 +7,6 @@
     android:background="@drawable/log_in"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/Email_login"
-        android:layout_width="114dp"
-        android:layout_height="31dp"
-        android:text="Email"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
-
-    <TextView
-        android:id="@+id/Password_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kata Laluan"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471" />
-
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="333dp"
@@ -49,6 +23,32 @@
         app:layout_constraintVertical_bias="0.571" />
 
     <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="320dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <TextView
+        android:id="@+id/Password_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kata Laluan"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <EditText
         android:id="@+id/etName"
         android:layout_width="319dp"
         android:layout_height="46dp"
@@ -58,20 +58,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.426" />
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="320dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:inputType="textPassword"
+    <TextView
+        android:id="@+id/Email_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522" />
+        app:layout_constraintVertical_bias="0.382" />
 
     <TextView
         android:id="@+id/tvRegister"
