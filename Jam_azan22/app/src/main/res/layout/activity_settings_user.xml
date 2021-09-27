@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.615" />
 
     <TextView
-        android:id="@+id/to_derma1"
+        android:id="@+id/to_derma"
         android:layout_width="138dp"
         android:layout_height="30dp"
         android:fontFamily="sans-serif-medium"
@@ -82,7 +82,7 @@
         app:layout_constraintVertical_bias="0.528" />
 
     <TextView
-        android:id="@+id/to_notifikasi1"
+        android:id="@+id/to_notifikasi"
         android:layout_width="130dp"
         android:layout_height="31dp"
         android:fontFamily="sans-serif-medium"

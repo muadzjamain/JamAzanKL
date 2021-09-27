@@ -52,7 +52,7 @@
         app:layout_constraintVertical_bias="0.624" />
 
     <TextView
-        android:id="@+id/to_derma2"
+        android:id="@+id/to_derma"
         android:layout_width="138dp"
         android:layout_height="30dp"
         android:fontFamily="sans-serif-medium"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.528" />
 
     <TextView
-        android:id="@+id/to_notifikasi1"
+        android:id="@+id/to_notifikasi"
         android:layout_width="130dp"
         android:layout_height="31dp"
         android:fontFamily="sans-serif-medium"
@@ -97,7 +97,7 @@
         app:layout_constraintVertical_bias="0.356" />
 
     <TextView
-        android:id="@+id/to_editprofile1"
+        android:id="@+id/to_editprofile"
         android:layout_width="115dp"
         android:layout_height="31dp"
         android:text="Profil"
@@ -111,7 +111,7 @@
         app:layout_constraintVertical_bias="0.266" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/to_azan"
         android:layout_width="110dp"
         android:layout_height="35dp"
         android:fontFamily="sans-serif-medium"
@@ -126,7 +126,7 @@
         app:layout_constraintVertical_bias="0.712" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/to_kalendar_hijrah"
         android:layout_width="198dp"
         android:layout_height="32dp"
         android:fontFamily="sans-serif-medium"
@@ -141,7 +141,7 @@
         app:layout_constraintVertical_bias="0.801" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/to_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log Keluar"

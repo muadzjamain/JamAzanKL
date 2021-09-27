@@ -21,8 +21,8 @@ public class UserSettings_Activity extends AppCompatActivity implements View.OnC
         Button to_main1 = findViewById(R.id.to_main1);
         TextView to_editprofile = findViewById(R.id.to_editprofile);
         TextView to_ubahslide = findViewById(R.id.to_ubahslide);
-        TextView to_notifikasi1 = findViewById(R.id.to_notifikasi1);
-        TextView to_derma1 = findViewById(R.id.to_derma1);
+        TextView to_notifikasi1 = findViewById(R.id.to_notifikasi);
+        TextView to_derma1 = findViewById(R.id.to_derma);
         TextView to_tentangkami = findViewById(R.id.to_tentangkami);
         TextView to_logout = findViewById(R.id.to_logout);
 
@@ -56,11 +56,11 @@ public class UserSettings_Activity extends AppCompatActivity implements View.OnC
                 Intent intent2 = new Intent(this, UbahSlide_Activity.class);
                 startActivity(intent2);
                 break;
-            case R.id.to_notifikasi1:
+            case R.id.to_notifikasi:
                 Intent intent3 = new Intent(this, Notifikasi_Activity.class);
                 startActivity(intent3);
                 break;
-            case R.id.to_derma1:
+            case R.id.to_derma:
                 Intent intent4 = new Intent(this, Derma_Activity.class);
                 startActivity(intent4);
                 break;
