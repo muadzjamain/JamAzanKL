@@ -68,7 +68,7 @@ public class DashboardUser extends AppCompatActivity {
 //    private void Logout() {
 //        firebaseAuth.signOut();
 //        finish();
-//        startActivity(new Intent(DashboardUser.this, MainActivity.class));
+//        startActivity(new Intent(DashboardUser.this, Login_Activity.class));
 //    }
 
 //    @Override

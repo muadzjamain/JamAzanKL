@@ -146,10 +146,10 @@ public class RegistrationActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
                         //sendUserData();
-                        Toast.makeText(RegistrationActivity.this, "Pendaftaran berjaya, Email pengesahan telah dihantar!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistrationActivity.this, "Pendaftaran berjaya, Emel pengesahan telah dihantar!", Toast.LENGTH_SHORT).show();
                         //firebaseAuth.signOut();
                     }else{
-                        Toast.makeText(RegistrationActivity.this, "Email pengesahan belum dihantar!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistrationActivity.this, "Emel pengesahan belum dihantar!", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -174,7 +174,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 firebaseAuth.signOut();
                 Toast.makeText(RegistrationActivity.this, "Pendaftaran berjaya dimuat naik!", Toast.LENGTH_SHORT).show();
                 finish();
-                startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+                startActivity(new Intent(RegistrationActivity.this, Login_Activity.class));
 
             }
         });

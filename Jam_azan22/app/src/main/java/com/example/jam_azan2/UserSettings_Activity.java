@@ -1,11 +1,9 @@
 package com.example.jam_azan2;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -41,7 +39,7 @@ public class UserSettings_Activity extends AppCompatActivity implements View.OnC
     private void Logout() {
         firebaseAuth.signOut();
         finish();
-        startActivity(new Intent(UserSettings_Activity.this, MainActivity.class));
+        startActivity(new Intent(UserSettings_Activity.this, Login_Activity.class));
     }
 
     @Override

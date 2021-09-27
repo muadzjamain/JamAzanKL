@@ -18,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class Login_Activity extends AppCompatActivity {
 
     private EditText Name;
     private EditText Password;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         Name = (EditText) findViewById(R.id.etName);
         Password = (EditText) findViewById(R.id.etPassword);
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (user != null) {
             finish();
-            startActivity(new Intent(MainActivity.this, DashboardUser.class));
+            startActivity(new Intent(Login_Activity.this, DashboardUser.class));
 
         }
 
@@ -61,14 +61,14 @@ public class MainActivity extends AppCompatActivity {
         userRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
+                startActivity(new Intent(Login_Activity.this, RegistrationActivity.class));
             }
         });
 
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, PasswordActivity.class));
+                startActivity(new Intent(Login_Activity.this, ForgotPassword_Activity.class));
             }
         });
     }
@@ -80,12 +80,12 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     progressDialog.dismiss();
-                    Toast.makeText(MainActivity.this, "Log Masuk Berjaya", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login_Activity.this, "Log Masuk Berjaya", Toast.LENGTH_SHORT).show();
                     checkEmailVerification();
                 } else {
-                    Toast.makeText(MainActivity.this, "Log Masuk Gagal", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login_Activity.this, "Log Masuk Gagal", Toast.LENGTH_SHORT).show();
                     counter--;
-                    Toast.makeText(MainActivity.this, "Bil percubaan yang tinggal: " + counter, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login_Activity.this, "Bil percubaan yang tinggal: " + counter, Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                     if (counter == 0) {
                         Login.setEnabled(false);
@@ -101,11 +101,11 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
         Boolean emailflag = firebaseUser.isEmailVerified();
 
-        startActivity(new Intent(MainActivity.this, DashboardUser.class));
+        startActivity(new Intent(Login_Activity.this, DashboardUser.class));
 
 //        if(emailflag){
 //            finish();
-//            startActivity(new Intent(MainActivity.this, DashboardUser.class));
+//            startActivity(new Intent(Login_Activity.this, DashboardUser.class));
 //        }else{
 //            Toast.makeText(this, "Verify your email", Toast.LENGTH_SHORT).show();
 //            firebaseAuth.signOut();

@@ -9,17 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jam_azan2">
+        <activity android:name=".DashboardAdmin"></activity>
         <activity
             android:name=".SplashScreen_Activity"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -32,7 +35,7 @@
         <activity android:name=".UpdatePassword" />
         <activity android:name=".UpdateProfile" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".PasswordActivity" />
+        <activity android:name=".ForgotPassword_Activity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".DashboardUser" />
     </application>
