@@ -75,7 +75,7 @@ public class Login_Activity extends AppCompatActivity {
 
     private void validate(String userName, String userPassword) {
 
-        if(userName.equals("muadz.jamain@gmail.com")){
+        if (userName.equals("muadz.jamain@gmail.com")) {
             firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -89,27 +89,28 @@ public class Login_Activity extends AppCompatActivity {
                     }
                 }
             });
-    }else;
-    firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    progressDialog.dismiss();
-                    Toast.makeText(Login_Activity.this, "Log Masuk Berjaya", Toast.LENGTH_SHORT).show();
-                    checkEmailVerification();
-                } else {
-                    Toast.makeText(Login_Activity.this, "Log Masuk Gagal", Toast.LENGTH_SHORT).show();
-                    counter--;
-                    Toast.makeText(Login_Activity.this, "Bil percubaan yang tinggal: " + counter, Toast.LENGTH_SHORT).show();
-                    progressDialog.dismiss();
-                    if (counter == 0) {
-                        Login.setEnabled(false);
+        } else {
+            firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        progressDialog.dismiss();
+                        Toast.makeText(Login_Activity.this, "Log Masuk Berjaya", Toast.LENGTH_SHORT).show();
+                        checkEmailVerification();
+                    } else {
+                        Toast.makeText(Login_Activity.this, "Log Masuk Gagal", Toast.LENGTH_SHORT).show();
+                        counter--;
+                        Toast.makeText(Login_Activity.this, "Bil percubaan yang tinggal: " + counter, Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                        if (counter == 0) {
+                            Login.setEnabled(false);
+                        }
+
                     }
 
                 }
-
-            }
-        });
+            });
+        }
     }
 
     private void checkEmailVerification() {
