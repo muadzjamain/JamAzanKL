@@ -75,7 +75,22 @@ public class Login_Activity extends AppCompatActivity {
 
     private void validate(String userName, String userPassword) {
 
-        firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        if(userName.equals("muadz.jamain@gmail.com")){
+            firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        progressDialog.dismiss();
+                        Toast.makeText(Login_Activity.this, "Log Masuk Berjaya", Toast.LENGTH_SHORT).show();
+                        checkEmailVerificationadmin();
+                    } else {
+                        Toast.makeText(Login_Activity.this, "Log Masuk Gagal", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                    }
+                }
+            });
+    }else;
+    firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
@@ -102,6 +117,20 @@ public class Login_Activity extends AppCompatActivity {
         Boolean emailflag = firebaseUser.isEmailVerified();
 
         startActivity(new Intent(Login_Activity.this, DashboardUser.class));
+
+//        if(emailflag){
+//            finish();
+//            startActivity(new Intent(Login_Activity.this, DashboardUser.class));
+//        }else{
+//            Toast.makeText(this, "Verify your email", Toast.LENGTH_SHORT).show();
+//            firebaseAuth.signOut();
+//        }
+    }
+    private void checkEmailVerificationadmin() {
+        FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
+        Boolean emailflag = firebaseUser.isEmailVerified();
+
+        startActivity(new Intent(Login_Activity.this, DashboardAdmin.class));
 
 //        if(emailflag){
 //            finish();
