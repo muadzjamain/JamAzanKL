@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class DashboardUser extends AppCompatActivity {
 
@@ -29,8 +30,7 @@ public class DashboardUser extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard_user);
 
         Calendar calendar= Calendar.getInstance();
-        String currentDate= DateFormat.getDateInstance().format(calendar.getTime());
-
+        String currentDate= android.text.format.DateFormat.format("dd MMMM yyyy",calendar).toString();
         TextView textViewDate = findViewById(R.id.normaldateid);
         textViewDate.setText(currentDate);
 
@@ -38,6 +38,15 @@ public class DashboardUser extends AppCompatActivity {
         String dayToday = android.text.format.DateFormat.format("EEEE", date).toString();
         TextView myTextView = findViewById(R.id.dayid);
         myTextView.setText(dayToday);
+
+        Calendar azan = Calendar.getInstance();
+        //DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRANCE);
+        //Locale locale = new Locale( "ar" , "SA" ) ;
+        ////
+        Locale locale = new Locale( "ar" , "SA" ) ;
+        String dateAzan = android.text.format.DateFormat.format("dd MMMM yyyy", azan).toString();
+        TextView AZANView = findViewById(R.id.azanDateid);
+        AZANView.setText(dateAzan);
 
 //        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 //

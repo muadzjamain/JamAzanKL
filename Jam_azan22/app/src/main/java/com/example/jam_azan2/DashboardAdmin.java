@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class DashboardAdmin extends AppCompatActivity {
 
@@ -28,8 +29,7 @@ public class DashboardAdmin extends AppCompatActivity {
             }
         });
         Calendar calendar= Calendar.getInstance();
-        String currentDate= DateFormat.getDateInstance().format(calendar.getTime());
-
+        String currentDate= android.text.format.DateFormat.format("dd MMMM yyyy",calendar).toString();
         TextView textViewDate = findViewById(R.id.normaldateid);
         textViewDate.setText(currentDate);
 
@@ -37,6 +37,14 @@ public class DashboardAdmin extends AppCompatActivity {
         String dayToday = android.text.format.DateFormat.format("EEEE", date).toString();
         TextView myTextView = findViewById(R.id.dayid);
         myTextView.setText(dayToday);
+
+        Calendar azan = Calendar.getInstance();
+        Locale locale = new Locale( "ar" , "SA" ) ;
+        String dateAzan = android.text.format.DateFormat.format("dd MMMM yyyy", azan).toString();
+        TextView AZANView = findViewById(R.id.azanDateid);
+        AZANView.setText(dateAzan);
+
+
 
     }
 
