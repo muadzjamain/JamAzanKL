@@ -9,9 +9,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.text.DateFormat;
+import java.util.Calendar;
 
 public class DashboardUser extends AppCompatActivity {
 
@@ -23,6 +27,17 @@ public class DashboardUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_user);
+
+        Calendar calendar= Calendar.getInstance();
+        String currentDate= DateFormat.getDateInstance().format(calendar.getTime());
+
+        TextView textViewDate = findViewById(R.id.normaldateid);
+        textViewDate.setText(currentDate);
+
+        Calendar date = Calendar.getInstance();
+        String dayToday = android.text.format.DateFormat.format("EEEE", date).toString();
+        TextView myTextView = findViewById(R.id.dayid);
+        myTextView.setText(dayToday);
 
 //        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 //
@@ -37,7 +52,7 @@ public class DashboardUser extends AppCompatActivity {
 //                                , DashBoard.class));
 //                        overridePendingTransition(0, 0);
 //                        return true;
-//                    case R.id.home:
+//                    case R.id.home:h
 //                        return true;
 //                    case R.id.about:
 //                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
