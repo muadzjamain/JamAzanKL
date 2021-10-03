@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -30,21 +29,19 @@ public class DashboardAdmin extends AppCompatActivity {
         });
         Calendar calendar= Calendar.getInstance();
         String currentDate= android.text.format.DateFormat.format("dd MMMM yyyy",calendar).toString();
-        TextView textViewDate = findViewById(R.id.normaldateid);
+        TextView textViewDate = findViewById(R.id.normal_date);
         textViewDate.setText(currentDate);
 
         Calendar date = Calendar.getInstance();
         String dayToday = android.text.format.DateFormat.format("EEEE", date).toString();
-        TextView myTextView = findViewById(R.id.dayid);
+        TextView myTextView = findViewById(R.id.day);
         myTextView.setText(dayToday);
 
-        Calendar azan = Calendar.getInstance();
-        Locale locale = new Locale( "ar" , "SA" ) ;
-        String dateAzan = android.text.format.DateFormat.format("dd MMMM yyyy", azan).toString();
-        TextView AZANView = findViewById(R.id.azanDateid);
-        AZANView.setText(dateAzan);
-
-
+        Calendar islamic = Calendar.getInstance();
+        Locale locale = new Locale( "JA" , "JP" ) ;
+        String islamicDate = android.text.format.DateFormat.format("dd MMMM yyyy", islamic).toString();
+        TextView AZANView = findViewById(R.id.islamic_date);
+        AZANView.setText(islamicDate);
 
     }
 

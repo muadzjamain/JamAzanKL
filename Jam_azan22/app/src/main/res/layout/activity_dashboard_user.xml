@@ -8,6 +8,84 @@
     tools:context=".DashboardUser">
 
     <TextView
+        android:id="@+id/time_insyak2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8:31 PM"
+        android:textColor="#C8C8C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
+
+    <TextView
+        android:id="@+id/time_maghrib2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7:17 PM"
+        android:textColor="#C8C8C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <TextView
+        android:id="@+id/time_asar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4:42 PM"
+        android:textColor="#C8C8C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <TextView
+        android:id="@+id/time_zohor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1:20 PM"
+        android:textColor="#C8C8C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
+
+    <TextView
+        android:id="@+id/time_Syuruk2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7:18 AM"
+        android:textColor="#C8C8C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.767" />
+
+    <TextView
+        android:id="@+id/time_subuh2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:07 AM"
+        android:textColor="#C8C8C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.724" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -120,36 +198,42 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <TextView
-        android:id="@+id/azanDateid"
+        android:id="@+id/islamic_date"
         android:layout_width="112dp"
         android:layout_height="21dp"
-        android:layout_marginTop="100dp"
-        android:text="AzamDate"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="116dp"
+        android:text="Islamic Date"
+        android:textColor="@color/white"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dayid"
+        android:id="@+id/normal_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Day"
-        app:layout_constraintEnd_toStartOf="@+id/azanDateid"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="116dp"
+        android:text="Date"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/islamic_date"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/normaldateid"
+        android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.397"
-        app:layout_constraintStart_toEndOf="@+id/azanDateid"
+        android:layout_marginTop="116dp"
+        android:text="Day"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/islamic_date"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
