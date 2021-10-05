@@ -3,6 +3,7 @@ package com.example.jam_azan2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,15 @@ public class DashboardAdmin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_admin);
+
+        String languageToLoad  = "ms"; // your language
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        this.setContentView(R.layout.activity_dashboard_user);
 
         to_settings1 = (Button) findViewById(R.id.to_settings1);
         to_settings1.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +48,6 @@ public class DashboardAdmin extends AppCompatActivity {
         myTextView.setText(dayToday);
 
         Calendar islamic = Calendar.getInstance();
-        Locale locale = new Locale( "JA" , "JP" ) ;
         String islamicDate = android.text.format.DateFormat.format("dd MMMM yyyy", islamic).toString();
         TextView AZANView = findViewById(R.id.islamic_date);
         AZANView.setText(islamicDate);
