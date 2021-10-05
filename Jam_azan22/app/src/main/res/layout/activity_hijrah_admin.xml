@@ -119,7 +119,7 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/etTarikhMasihi"
         android:layout_width="314dp"
         android:layout_height="47dp"
         android:ems="10"
@@ -133,12 +133,12 @@
         app:layout_constraintVertical_bias="0.186" />
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/etTarikhHijri"
         android:layout_width="316dp"
         android:layout_height="48dp"
         android:ems="10"
         android:hint="Tukar tarikh hijrah menjadi"
-        android:inputType="date"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

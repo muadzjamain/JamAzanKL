@@ -147,15 +147,6 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(ProfileActivity.this, UpdatePassword.class));
             }
         });
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()){
-//            case android.R.id.home:
-//                onBackPressed();
-//        }
-//        return super.onOptionsItemSelected(item);
     }
 }
 

@@ -47,11 +47,9 @@ public class Login_Activity extends AppCompatActivity {
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         if (user != null) {
-            finish();
-            startActivity(new Intent(Login_Activity.this, DashboardUser.class));
-
-        }
-
+                finish();
+                startActivity(new Intent(Login_Activity.this, DashboardUser.class));
+            }
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +62,6 @@ public class Login_Activity extends AppCompatActivity {
                 startActivity(new Intent(Login_Activity.this, RegistrationActivity.class));
             }
         });
-
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,5 +138,4 @@ public class Login_Activity extends AppCompatActivity {
 //            firebaseAuth.signOut();
 //        }
     }
-
 }

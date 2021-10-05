@@ -121,7 +121,7 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <EditText
-        android:id="@+id/editTextDate3"
+        android:id="@+id/etTarikhAzan"
         android:layout_width="317dp"
         android:layout_height="46dp"
         android:hint="Pilih tarikh (Cth: 30122021)"
@@ -134,7 +134,7 @@
         app:layout_constraintVertical_bias="0.185" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etWaktuAzan"
         android:layout_width="317dp"
         android:layout_height="46dp"
         android:hint="Waktu azan (HURUF BESAR)"
@@ -147,7 +147,7 @@
         app:layout_constraintVertical_bias="0.267" />
 
     <EditText
-        android:id="@+id/editTextTime"
+        android:id="@+id/etTukarWaktuAzan"
         android:layout_width="317dp"
         android:layout_height="46dp"
         android:ems="10"

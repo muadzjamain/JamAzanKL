@@ -50,7 +50,8 @@ public class AdminSettings_Activity extends AppCompatActivity implements View.On
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.to_main1:
-                onBackPressed();
+                Intent intent17 = new Intent(this, DashboardAdmin.class);
+                startActivity(intent17);
                 break;
             case R.id.to_editprofile:
                 Intent intent15 = new Intent(this, ProfileActivity.class);

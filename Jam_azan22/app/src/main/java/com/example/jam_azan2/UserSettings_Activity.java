@@ -46,7 +46,8 @@ public class UserSettings_Activity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.to_main1:
-                onBackPressed();
+                Intent intent18 = new Intent(this, DashboardUser.class);
+                startActivity(intent18);
                 break;
             case R.id.to_editprofile:
                 Intent intent15 = new Intent(this, ProfileActivity.class);

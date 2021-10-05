@@ -38,7 +38,7 @@ public class DashboardUser extends AppCompatActivity {
         //DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRANCE);
         //Locale locale = new Locale( "ar" , "SA" ) ;
         ////
-        Locale locale = new Locale( "ar" , "SA" ) ;
+        Locale locale = new Locale( "ms" , "MY" ) ;
         String islamicDate = android.text.format.DateFormat.format("dd MMMM yyyy", islamic).toString();
         TextView AZANView = findViewById(R.id.islamic_date);
         AZANView.setText(islamicDate);
