@@ -1,14 +1,19 @@
 package com.example.jam_azan2;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.time.LocalDate;
+import java.time.chrono.HijrahDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -16,6 +21,7 @@ public class DashboardAdmin extends AppCompatActivity {
 
     private Button to_settings1;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +44,7 @@ public class DashboardAdmin extends AppCompatActivity {
             }
         });
         Calendar calendar= Calendar.getInstance();
-        String currentDate= android.text.format.DateFormat.format("dd MMMM yyyy",calendar).toString();
+        String currentDate= android.text.format.DateFormat.format("d MMMM yyyy",calendar).toString();
         TextView textViewDate = findViewById(R.id.normal_date);
         textViewDate.setText(currentDate);
 
@@ -47,11 +53,25 @@ public class DashboardAdmin extends AppCompatActivity {
         TextView myTextView = findViewById(R.id.day);
         myTextView.setText(dayToday);
 
-        Calendar islamic = Calendar.getInstance();
-        String islamicDate = android.text.format.DateFormat.format("dd MMMM yyyy", islamic).toString();
+        ///
+
+        int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+        int monthOfYear = calendar.get(Calendar.MONTH);
+        int year = calendar.get(Calendar.YEAR);
+
+        LocalDate dt = LocalDate.of(year, monthOfYear, dayOfMonth);
+        HijrahDate hijrahDate = HijrahDate.from(dt);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy");
+        String islamicDate = formatter.format(hijrahDate); // 07/03/1439
         TextView AZANView = findViewById(R.id.islamic_date);
         AZANView.setText(islamicDate);
 
+
+        //
+//        Calendar islamic = Calendar.getInstance();
+//        String islamicDate = android.text.format.DateFormat.format("dd MMMM yyyy", islamic).toString();
+//        TextView AZANView = findViewById(R.id.islamic_date);
+//        AZANView.setText(islamicDate);
     }
 
     public void openSettings() {
