@@ -41,7 +41,7 @@ public class DashboardUser extends AppCompatActivity {
         this.setContentView(R.layout.activity_dashboard_user);
 
         Calendar calendar= Calendar.getInstance();
-        String currentDate= android.text.format.DateFormat.format("dd MMMM yyyy",calendar).toString();
+        String currentDate= android.text.format.DateFormat.format("d MMMM yyyy",calendar).toString();
         TextView textViewDate = findViewById(R.id.normal_date);
         textViewDate.setText(currentDate);
 
