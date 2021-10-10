@@ -3,25 +3,20 @@ package com.example.jam_azan2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -55,7 +50,7 @@ public class ProfileActivity extends AppCompatActivity {
         profileEmail = findViewById(R.id.tvProfileEmail);
         profileUpdate = findViewById(R.id.btnProfileUpdate);
         changePassword= findViewById(R.id.btnChangePassword);
-        toSettings = findViewById(R.id.to_settings4);
+        toSettings = findViewById(R.id.to_profil1);
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

@@ -16,10 +16,10 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/text_tentang_kami"
@@ -81,17 +81,17 @@
 
     <TextView
         android:id="@+id/haziq"
-        android:layout_width="157dp"
+        android:layout_width="155dp"
         android:layout_height="38dp"
         android:fontFamily="sans-serif-medium"
         android:text="Muhammad Haziq (Documentation)"
         android:textColor="#F4EBEB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.983"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822" />
+        app:layout_constraintVertical_bias="0.668" />
 
     <TextView
         android:id="@+id/daniyal"
@@ -102,10 +102,10 @@
         android:textColor="#F1E6E6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.665" />
+        app:layout_constraintVertical_bias="0.822" />
 
     <TextView
         android:id="@+id/fahmi"
@@ -116,34 +116,34 @@
         android:textColor="#EFE8E8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintHorizontal_bias="0.979"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintVertical_bias="0.827" />
 
     <TextView
         android:id="@+id/veenah"
-        android:layout_width="159dp"
-        android:layout_height="34dp"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
         android:text="Veenah (Back End Programmer)"
         android:textColor="#FAF5F5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.977" />
 
     <TextView
         android:id="@+id/yaqin"
-        android:layout_width="146dp"
+        android:layout_width="161dp"
         android:layout_height="37dp"
-        android:text="Tun Ainul Yaqin (Front End Programmer)"
+        android:text="Tun Ainul Yaqin\n(Front End Programmer)"
         android:textColor="#F3EBEB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.984" />
+        app:layout_constraintVertical_bias="0.979" />
 </androidx.constraintlayout.widget.ConstraintLayout>

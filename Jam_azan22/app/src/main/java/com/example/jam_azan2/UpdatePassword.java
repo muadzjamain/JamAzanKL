@@ -3,11 +3,13 @@ package com.example.jam_azan2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class UpdatePassword extends AppCompatActivity {
 
-    private Button update;
+    private Button update, toSettings;
     private EditText newPassword;
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
@@ -32,6 +34,7 @@ public class UpdatePassword extends AppCompatActivity {
 
         update=findViewById(R.id.btnUpdatePassword);
         newPassword=findViewById(R.id.etNewPassword);
+        toSettings = (Button)findViewById(R.id.to_settings);
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -58,14 +61,21 @@ public class UpdatePassword extends AppCompatActivity {
             }
         });
 
+        toSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
 
     }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:
-                onBackPressed();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()){
+//            case android.R.id.home:
+//                onBackPressed();
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }

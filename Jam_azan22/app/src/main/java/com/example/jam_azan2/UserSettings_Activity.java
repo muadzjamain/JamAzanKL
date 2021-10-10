@@ -1,8 +1,11 @@
 package com.example.jam_azan2;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,13 +13,50 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.time.LocalDate;
+import java.time.chrono.HijrahDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class UserSettings_Activity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_user);
+
+        String languageToLoad  = "ms"; // your language
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        this.setContentView(R.layout.activity_settings_user);
+
+        Calendar calendar= Calendar.getInstance();
+        String currentDate= android.text.format.DateFormat.format("d MMMM yyyy",calendar).toString();
+        TextView textViewDate = findViewById(R.id.normal_date3);
+        textViewDate.setText(currentDate);
+
+        Calendar date = Calendar.getInstance();
+        String dayToday = android.text.format.DateFormat.format("EEEE", date).toString();
+        TextView myTextView = findViewById(R.id.day3);
+        myTextView.setText(dayToday);
+
+
+        int dayOfMonth = 5;
+        int monthOfYear = 10;
+        int year = 2021;
+        LocalDate dt = LocalDate.of(year, monthOfYear, dayOfMonth);
+        HijrahDate hijrahDate = HijrahDate.from(dt);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy");
+        String islamicDate = formatter.format(hijrahDate); // 07/03/1439
+        TextView AZANView = findViewById(R.id.islamic_date3);
+        AZANView.setText(islamicDate);
 
         Button to_main1 = findViewById(R.id.to_main1);
         TextView to_editprofile = findViewById(R.id.to_editprofile);

@@ -33,15 +33,13 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import org.w3c.dom.Text;
-
 import java.io.IOException;
 
 public class UpdateProfile extends AppCompatActivity {
 
     private EditText newUserName;
     private TextView newUserEmail;
-    private Button save, toSettings;
+    private Button save, toProfile;
     private ImageView profilePic;
 
     private FirebaseAuth firebaseAuth;
@@ -78,7 +76,7 @@ public class UpdateProfile extends AppCompatActivity {
         newUserName = (EditText)findViewById(R.id.etNameUpdate);
         newUserEmail = (TextView)findViewById(R.id.tvEmailUpdate1);
         save = (Button)findViewById(R.id.btnSave);
-        toSettings = (Button)findViewById(R.id.to_settings4);
+        toProfile = (Button)findViewById(R.id.to_profil1);
         profilePic = (ImageView)findViewById(R.id.ivProfileUpdate);
         progressDialog = new ProgressDialog(this);
 
@@ -114,10 +112,10 @@ public class UpdateProfile extends AppCompatActivity {
             }
         });
 
-        toSettings.setOnClickListener(new View.OnClickListener() {
+        toProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                startActivity(new Intent(UpdateProfile.this, ProfileActivity.class));
             }
         });
 

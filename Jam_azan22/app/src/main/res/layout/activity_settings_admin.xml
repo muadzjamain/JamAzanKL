@@ -5,7 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminSettings_Activity"
-    android:background="@drawable/setting_update">
+    android:background="@drawable/settings_back">
+
+    <TextView
+        android:id="@+id/day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <TextView
+        android:id="@+id/normal_date2"
+        android:layout_width="115dp"
+        android:layout_height="21dp"
+        android:text="Date"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <TextView
+        android:id="@+id/islamic_date2"
+        android:layout_width="114dp"
+        android:layout_height="21dp"
+        android:text="Islamic Date"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
 
     <TextView
         android:id="@+id/textView8"
@@ -111,36 +153,6 @@
         app:layout_constraintVertical_bias="0.266" />
 
     <TextView
-        android:id="@+id/to_azan"
-        android:layout_width="110dp"
-        android:layout_height="35dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Data Azan"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.279"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.712" />
-
-    <TextView
-        android:id="@+id/to_kalendar_hijrah"
-        android:layout_width="198dp"
-        android:layout_height="32dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Data Kalendar Hijrah"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801" />
-
-    <TextView
         android:id="@+id/to_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -152,6 +164,6 @@
         app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.883" />
+        app:layout_constraintVertical_bias="0.694" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
