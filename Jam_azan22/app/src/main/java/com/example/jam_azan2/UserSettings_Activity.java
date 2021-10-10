@@ -88,31 +88,43 @@ public class UserSettings_Activity extends AppCompatActivity implements View.OnC
             case R.id.to_main1:
                 Intent intent18 = new Intent(this, DashboardUser.class);
                 startActivity(intent18);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 break;
             case R.id.to_editprofile:
                 Intent intent15 = new Intent(this, ProfileActivity.class);
                 startActivity(intent15);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.to_ubahslide:
                 Intent intent2 = new Intent(this, UbahSlide_Activity.class);
                 startActivity(intent2);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.to_notifikasi:
                 Intent intent3 = new Intent(this, Notifikasi_Activity.class);
                 startActivity(intent3);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.to_derma:
                 Intent intent4 = new Intent(this, Derma_Activity.class);
                 startActivity(intent4);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.to_tentangkami:
                 Intent intent5 = new Intent(this, TentangKami_Activity.class);
                 startActivity(intent5);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.to_logout:
                 Logout();
                 break;
         }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
 }

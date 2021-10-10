@@ -60,12 +60,14 @@ public class Login_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Login_Activity.this, RegistrationActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Login_Activity.this, ForgotPassword_Activity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
     }
@@ -115,6 +117,7 @@ public class Login_Activity extends AppCompatActivity {
         Boolean emailflag = firebaseUser.isEmailVerified();
 
         startActivity(new Intent(Login_Activity.this, DashboardUser.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
 //        if(emailflag){
 //            finish();
@@ -129,6 +132,7 @@ public class Login_Activity extends AppCompatActivity {
         Boolean emailflag = firebaseUser.isEmailVerified();
 
         startActivity(new Intent(Login_Activity.this, DashboardAdmin.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
 //        if(emailflag){
 //            finish();

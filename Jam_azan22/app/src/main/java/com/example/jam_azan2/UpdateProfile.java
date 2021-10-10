@@ -116,6 +116,7 @@ public class UpdateProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(UpdateProfile.this, ProfileActivity.class));
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
 

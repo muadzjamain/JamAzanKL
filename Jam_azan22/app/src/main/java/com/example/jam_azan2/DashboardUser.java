@@ -81,6 +81,7 @@ public class DashboardUser extends AppCompatActivity {
     public void openSettings() {
         Intent intent = new Intent(this, UserSettings_Activity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
 }
