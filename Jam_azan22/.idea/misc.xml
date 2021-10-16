@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/veena/Desktop/Master LOL/Jam_azan22/app/src/main/res/layout/activity_dashboard_user.xml" value="0.264" />
+        <entry key="..\:/Users/veena/Desktop/Master LOL/Jam_azan22/app/src/main/res/layout/activity_new_user_dashboard.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/veena/Desktop/Master LOL/Jam_azan22/app/src/main/res/layout/slider_item.xml" value="0.1" />
         <entry key="..\:/Users/veena/Desktop/Master/Jam_azan22/app/src/main/res/layout/activity_dashboard_admin.xml" value="0.264" />
         <entry key="..\:/Users/veena/Desktop/Master/Jam_azan22/app/src/main/res/layout/activity_dashboard_user.xml" value="0.4" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

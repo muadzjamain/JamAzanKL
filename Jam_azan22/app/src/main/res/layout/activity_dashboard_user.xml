@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".DashboardUser">
+    tools:context=".DashboardUser"
+    android:orientation="vertical">
+
 
     <TextView
         android:id="@+id/time_insyak2"
@@ -237,5 +239,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.144" />
+
+<!--    <com.denzcoskun.imageslider.ImageSlider-->
+<!--        android:id="@+id/slider"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="210dp"-->
+<!--        app:iss_auto_cycle="true"-->
+<!--        app:iss_delay="0"-->
+<!--        app:iss_error_image="@drawable/error"-->
+<!--        app:iss_period="1000"-->
+<!--        app:iss_placeholder="@drawable/placeholder"-->
+<!--        app:iss_selected_dot="@drawable/default_selected_dot"-->
+<!--        app:iss_title_background="@drawable/gradient"-->
+<!--        app:iss_unselected_dot="@drawable/default_unselected_dot"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView4"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.644" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
