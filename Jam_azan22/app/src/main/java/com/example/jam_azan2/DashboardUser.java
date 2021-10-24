@@ -50,10 +50,13 @@ public class DashboardUser extends AppCompatActivity {
         TextView myTextView = findViewById(R.id.day);
         myTextView.setText(dayToday);
 
+        ///
+        int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+        Calendar islamicMonth1 = Calendar.getInstance();
+        String islamicMonth2= android.text.format.DateFormat.format("MM",islamicMonth1).toString();
+        int monthOfYear = Integer.parseInt(islamicMonth2);
+        int year = calendar.get(Calendar.YEAR);
 
-        int dayOfMonth = 5;
-        int monthOfYear = 10;
-        int year = 2021;
         LocalDate dt = LocalDate.of(year, monthOfYear, dayOfMonth);
         HijrahDate hijrahDate = HijrahDate.from(dt);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy");

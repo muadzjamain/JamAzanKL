@@ -54,9 +54,10 @@ public class DashboardAdmin extends AppCompatActivity {
         myTextView.setText(dayToday);
 
         ///
-
         int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
-        int monthOfYear = calendar.get(Calendar.MONTH);
+        Calendar islamicMonth1 = Calendar.getInstance();
+        String islamicMonth2= android.text.format.DateFormat.format("MM",islamicMonth1).toString();
+        int monthOfYear = Integer.parseInt(islamicMonth2);
         int year = calendar.get(Calendar.YEAR);
 
         LocalDate dt = LocalDate.of(year, monthOfYear, dayOfMonth);
@@ -65,13 +66,7 @@ public class DashboardAdmin extends AppCompatActivity {
         String islamicDate = formatter.format(hijrahDate); // 07/03/1439
         TextView AZANView = findViewById(R.id.islamic_date);
         AZANView.setText(islamicDate);
-
-
-        //
-//        Calendar islamic = Calendar.getInstance();
-//        String islamicDate = android.text.format.DateFormat.format("dd MMMM yyyy", islamic).toString();
-//        TextView AZANView = findViewById(R.id.islamic_date);
-//        AZANView.setText(islamicDate);
+        
     }
 
     public void openSettings() {
