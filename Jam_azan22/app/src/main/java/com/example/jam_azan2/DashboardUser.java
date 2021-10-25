@@ -96,9 +96,9 @@ public class DashboardUser extends AppCompatActivity {
         });
 
 
-//        String languageToLoad  = "ms"; // your language
-//        Locale locale = new Locale(languageToLoad);
-//        Locale.setDefault(locale);
+        String languageToLoad  = "ms"; // your language
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
 //        Configuration config = new Configuration();
 //        config.locale = locale;
 //        getBaseContext().getResources().updateConfiguration(config,
