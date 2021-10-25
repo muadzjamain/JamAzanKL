@@ -120,7 +120,7 @@ public class DashboardAdmin extends AppCompatActivity {
         TextView myTextView = findViewById(R.id.day);
         myTextView.setText(dayToday);
 
-        ///
+
         int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
         Calendar islamicMonth1 = Calendar.getInstance();
         String islamicMonth2= android.text.format.DateFormat.format("MM",islamicMonth1).toString();
