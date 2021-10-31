@@ -41,8 +41,10 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    implementation 'com.google.android.gms:play-services-wallet:18.1.3'
+    implementation 'com.android.support:appcompat-v7:30.0.0'
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
 
 
 }
