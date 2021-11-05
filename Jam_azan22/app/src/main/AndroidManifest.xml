@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jam_azan2">
         <activity
+            android:name=".PaymentDetails"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen_Activity"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>

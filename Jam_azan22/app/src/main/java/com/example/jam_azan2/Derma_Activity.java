@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.jam_azan2.Config.Config;
@@ -27,6 +28,7 @@ public class Derma_Activity extends AppCompatActivity {
     private Button RM5Button;
     private Button RM10Button;
     private Button RM50Button;
+
     private static final int PAYPAL_REQUEST_CODE = 7171;
 
     private static PayPalConfiguration config =new PayPalConfiguration()
@@ -52,6 +54,11 @@ public class Derma_Activity extends AppCompatActivity {
         startService(intent);
 
         RM1Button=findViewById(R.id.rm1button);
+        RM2Button=findViewById(R.id.rm2button);
+        RM5Button=findViewById(R.id.rm5button);
+        RM10Button=findViewById(R.id.rm10button);
+        RM50Button=findViewById(R.id.rm50button);
+
         RM1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +68,7 @@ public class Derma_Activity extends AppCompatActivity {
 
             private void processPayment() {
                 amount="1";
-                PayPalPayment payPalPayment=new PayPalPayment(new BigDecimal(String.valueOf(amount)),"RM",
+                PayPalPayment payPalPayment=new PayPalPayment(new BigDecimal(String.valueOf(amount)),"MYR",
                         "Donate for Azan",PayPalPayment.PAYMENT_INTENT_SALE);
                 Intent intent = new Intent(Derma_Activity.this, PaymentActivity.class);
                 intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
@@ -71,6 +78,81 @@ public class Derma_Activity extends AppCompatActivity {
             }
         });
 
+        RM2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processPayment();
+
+            }
+
+            private void processPayment() {
+                amount="2";
+                PayPalPayment payPalPayment=new PayPalPayment(new BigDecimal(String.valueOf(amount)),"MYR",
+                        "Donate for Azan",PayPalPayment.PAYMENT_INTENT_SALE);
+                Intent intent = new Intent(Derma_Activity.this, PaymentActivity.class);
+                intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
+                intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payPalPayment);
+                startActivityForResult(intent,PAYPAL_REQUEST_CODE);
+
+            }
+        });
+
+        RM5Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processPayment();
+
+            }
+
+            private void processPayment() {
+                amount="5";
+                PayPalPayment payPalPayment=new PayPalPayment(new BigDecimal(String.valueOf(amount)),"MYR",
+                        "Donate for Azan",PayPalPayment.PAYMENT_INTENT_SALE);
+                Intent intent = new Intent(Derma_Activity.this, PaymentActivity.class);
+                intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
+                intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payPalPayment);
+                startActivityForResult(intent,PAYPAL_REQUEST_CODE);
+
+            }
+        });
+
+        RM10Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processPayment();
+
+            }
+
+            private void processPayment() {
+                amount="10";
+                PayPalPayment payPalPayment=new PayPalPayment(new BigDecimal(String.valueOf(amount)),"MYR",
+                        "Donate for Azan",PayPalPayment.PAYMENT_INTENT_SALE);
+                Intent intent = new Intent(Derma_Activity.this, PaymentActivity.class);
+                intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
+                intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payPalPayment);
+                startActivityForResult(intent,PAYPAL_REQUEST_CODE);
+
+            }
+        });
+
+        RM50Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processPayment();
+
+            }
+
+            private void processPayment() {
+                amount="50";
+                PayPalPayment payPalPayment=new PayPalPayment(new BigDecimal(String.valueOf(amount)),"MYR",
+                        "Donate for Azan",PayPalPayment.PAYMENT_INTENT_SALE);
+                Intent intent = new Intent(Derma_Activity.this, PaymentActivity.class);
+                intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
+                intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payPalPayment);
+                startActivityForResult(intent,PAYPAL_REQUEST_CODE);
+
+            }
+        });
 
         Button to_settings1 = findViewById(R.id.to_settings1);
 
@@ -83,28 +165,29 @@ public class Derma_Activity extends AppCompatActivity {
     }
 
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        //super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == PAYPAL_REQUEST_CODE) {
-//            if (resultCode == RESULT_OK) {
-//                PaymentConfirmation confirmation = data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
-//                if (confirmation != null) {
-//                    try {
-//                        String paymentDetails = confirmation.toJSONObject().toString(4);
-//                        startActivity(new Intent(this, PaymentActivity.class)
-//                                .putExtra("PaymentDetails", paymentDetails)
-//                                .putExtra("PaymentAmount", amount));
-//
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            } else if (resultCode == Activity.RESULT_CANCELED)
-//                Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show();
-//        } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID)
-//            Toast.makeText(this, "Invaild", Toast.LENGTH_SHORT).show();
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PAYPAL_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                PaymentConfirmation confirmation = data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
+                if (confirmation != null) {
+                    try {
+                        String paymentDetails = confirmation.toJSONObject().toString(4);
+                        startActivity(new Intent(this, PaymentActivity.class)
+                                .putExtra("PaymentDetails", paymentDetails)
+                                .putExtra("PaymentAmount", amount));
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            } else if (resultCode == Activity.RESULT_CANCELED)
+                Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show();
+        } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID)
+            Toast.makeText(this, "Invaild", Toast.LENGTH_SHORT).show();
+        ;
+    }
 
     public void openSettings() {
         onBackPressed();
