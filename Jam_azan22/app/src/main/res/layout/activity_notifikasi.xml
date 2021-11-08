@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/subuhswitch"
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:checked="true"
@@ -82,7 +82,7 @@
         app:layout_constraintVertical_bias="0.298" />
 
     <Switch
-        android:id="@+id/shuru"
+        android:id="@+id/syurukswitch"
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:checked="true"
