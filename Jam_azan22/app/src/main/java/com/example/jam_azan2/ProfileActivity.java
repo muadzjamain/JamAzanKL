@@ -50,7 +50,7 @@ public class ProfileActivity extends AppCompatActivity {
         profileEmail = findViewById(R.id.tvProfileEmail);
         profileUpdate = findViewById(R.id.btnProfileUpdate);
         changePassword= findViewById(R.id.btnChangePassword);
-        toSettings = findViewById(R.id.to_profil1);
+        toSettings = findViewById(R.id.to_profil2);
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

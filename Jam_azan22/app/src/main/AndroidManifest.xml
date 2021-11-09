@@ -2,16 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jam_azan2">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-<!--    for card.io card scanning -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- for card.io card scanning -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <uses-feature android:name="android.hardware.camera" android:required="false"/>
-    <uses-feature android:name="android:hardware.camera.autofocus" android:required="false"/>
-
-<!-- for most things, including card.io & paypal -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android:hardware.camera.autofocus"
+        android:required="false" /> <!-- for most things, including card.io & paypal -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +21,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jam_azan2">
+        <activity
+            android:name=".Slidechange"
+            android:exported="false" />
         <activity
             android:name=".PaymentDetails"
             android:exported="false" />
@@ -55,6 +59,5 @@
         <activity android:name=".DataAzan" />
         <activity android:name=".DataKalendarHijrah" />
     </application>
-
 
 </manifest>

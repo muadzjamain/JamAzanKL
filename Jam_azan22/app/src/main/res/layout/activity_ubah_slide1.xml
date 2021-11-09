@@ -7,10 +7,36 @@
     tools:context=".UbahSlide_Activity"
     android:background="@drawable/ubah_slide1">
 
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/image_slider"
+        android:layout_width="378dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ayat_ubah_slide"
+        app:layout_constraintVertical_bias="0.0"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderScrollTimeInSec="6"
+        app:sliderStartAutoCycle="true"
+        tools:layout_constraintCircleRadius="5dp" />
+
     <Button
-        android:id="@+id/to_profil1"
-        android:layout_width="32dp"
-        android:layout_height="36dp"
+        android:id="@+id/to_profil2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:background="@color/Transparent"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +44,8 @@
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/ayat_ubah_slide"
@@ -49,4 +76,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.097" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="248dp"
+        android:layout_height="54dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider"
+        app:layout_constraintVertical_bias="0.262"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal_background" />
+
+    <Button
+        android:id="@+id/chgSlide"
+        android:layout_width="248dp"
+        android:layout_height="54dp"
+        android:background="@color/Transparent"
+        android:text="Menukar Slide"
+        android:textColor="#673AB7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider"
+        app:layout_constraintVertical_bias="0.262" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
