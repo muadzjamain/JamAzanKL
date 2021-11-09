@@ -9,6 +9,12 @@ import android.widget.Button;
 
 public class Slidechange extends AppCompatActivity {
     private Button to_profil2;
+    private Button picture1;
+    private Button picture2;
+    private Button picture3;
+    private Button picture4;
+    private Button picture5;
+    private Button picture6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +27,16 @@ public class Slidechange extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent51 = new Intent(Slidechange.this, UbahSlide_Activity.class);
                 startActivity(intent51);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
 
+        picture1=findViewById(R.id.pic1);
+        picture2=findViewById(R.id.pic2);
+        picture3=findViewById(R.id.pic3);
+        picture4=findViewById(R.id.pic4);
+        picture5=findViewById(R.id.pic5);
+        picture6=findViewById(R.id.pic6);
 
 
 

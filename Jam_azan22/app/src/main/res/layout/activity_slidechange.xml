@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.097" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img1"
         android:layout_width="69dp"
         android:layout_height="51dp"
         android:layout_marginTop="152dp"
@@ -48,58 +48,58 @@
         app:srcCompat="@drawable/mas1" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/img2"
         android:layout_width="69dp"
         android:layout_height="51dp"
         android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/pic1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/img1"
         app:srcCompat="@drawable/mas3" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/img3"
         android:layout_width="69dp"
         android:layout_height="51dp"
         android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/pic1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/img2"
         app:srcCompat="@drawable/mas8" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/img4"
         android:layout_width="69dp"
         android:layout_height="51dp"
         android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/pic1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/img3"
         app:srcCompat="@drawable/mas9" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/img5"
         android:layout_width="69dp"
         android:layout_height="51dp"
         android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/pic1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/img4"
         app:srcCompat="@drawable/mas11" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/img6"
         android:layout_width="69dp"
         android:layout_height="51dp"
         android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/pic1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/img5"
         app:srcCompat="@drawable/mas12" />
 
     <Button
@@ -107,7 +107,7 @@
         android:layout_width="188dp"
         android:layout_height="49dp"
         android:layout_marginTop="48dp"
-        android:text="UPlOAD"
+        android:text="Pick Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +118,7 @@
         android:layout_width="188dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
-        android:text="UPlOAD"
+        android:text="Pick Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +129,7 @@
         android:layout_width="188dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
-        android:text="UPlOAD"
+        android:text="Pick Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +140,7 @@
         android:layout_width="188dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
-        android:text="UPlOAD"
+        android:text="Pick Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,7 +151,7 @@
         android:layout_width="188dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
-        android:text="UPlOAD"
+        android:text="Pick Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,11 +162,23 @@
         android:layout_width="188dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
-        android:text="UPlOAD"
+        android:text="Pick Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pic5" />
+
+    <Button
+        android:id="@+id/Update"
+        android:layout_width="223dp"
+        android:layout_height="58dp"
+        android:text="Upload Picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pic6"
+        app:layout_constraintVertical_bias="0.222" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

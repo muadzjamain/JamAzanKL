@@ -33,17 +33,18 @@ public class UbahSlide_Activity extends AppCompatActivity {
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         sliderView.startAutoCycle();
 
+
+
         slideeditBut=findViewById(R.id.chgSlide);
         slideeditBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent50 = new Intent(UbahSlide_Activity.this, Slidechange.class);
                 startActivity(intent50);
-                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
 
-        Button to_settings4 = findViewById(R.id.to_profil2);
+        Button to_settings4 = findViewById(R.id.to_profil1);
 
         to_settings4.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.013" />
 
     <Button
-        android:id="@+id/to_profil2"
+        android:id="@+id/to_profil1"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:background="@color/Transparent"

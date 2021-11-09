@@ -76,7 +76,7 @@ public class UpdateProfile extends AppCompatActivity {
         newUserName = (EditText)findViewById(R.id.etNameUpdate);
         newUserEmail = (TextView)findViewById(R.id.tvEmailUpdate1);
         save = (Button)findViewById(R.id.btnSave);
-        toProfile = (Button)findViewById(R.id.to_profil2);
+        toProfile = (Button)findViewById(R.id.to_profil1);
         profilePic = (ImageView)findViewById(R.id.ivProfileUpdate);
         progressDialog = new ProgressDialog(this);
 
