@@ -5,7 +5,10 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,6 +19,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +27,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Notifikasi_Activity extends AppCompatActivity {
@@ -56,6 +61,12 @@ public class Notifikasi_Activity extends AppCompatActivity {
         Switch switchAsar = findViewById(R.id.asarswitch);
         Switch switchMaghrib = findViewById(R.id.maghribswitch);
         Switch switchIsyak = findViewById(R.id.isyakswitch);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("My Notification", "My Notification",NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
 
         firebaseAuth= FirebaseAuth.getInstance();
         firebaseDatabase= FirebaseDatabase.getInstance();
@@ -92,14 +103,28 @@ public class Notifikasi_Activity extends AppCompatActivity {
             }
         });
 
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm a");
+        String currentTime = simpleDateFormat.format(calendar.getTime());
+
         switchSubuh.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
+                    if(currentTime==subuhMasa) {
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
+                                .setSmallIcon(R.mipmap.ic_launcher_round)
+                                .setContentTitle("Subuh")
+                                .setContentText("Telah masuk waktu Subuh bagi kawasan Kuala Lumpur & sewaktu dengannya.")
+                                .setAutoCancel(true)
+                                .setStyle(new NotificationCompat.BigTextStyle()
+                                        .bigText("Telah masuk waktu Subuh bagi kawasan Kuala Lumpur & sewaktu dengannya."))
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-                }
-                else{
-
+                        NotificationManager notificationManager = (NotificationManager)
+                                getSystemService(NOTIFICATION_SERVICE);
+                        notificationManager.notify(0, builder.build());
+                    }
                 }
             }
         });
@@ -108,10 +133,20 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
+                    if(currentTime==syurukMasa) {
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
+                                .setSmallIcon(R.mipmap.ic_launcher_round)
+                                .setContentTitle("Syuruk")
+                                .setContentText("Telah masuk waktu Syuruk bagi kawasan Kuala Lumpur & sewaktu dengannya.")
+                                .setAutoCancel(true)
+                                .setStyle(new NotificationCompat.BigTextStyle()
+                                        .bigText("Telah masuk waktu Syuruk bagi kawasan Kuala Lumpur & sewaktu dengannya."))
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-                }
-                else{
-
+                        NotificationManager notificationManager = (NotificationManager)
+                                getSystemService(NOTIFICATION_SERVICE);
+                        notificationManager.notify(0, builder.build());
+                    }
                 }
             }
         });
@@ -120,10 +155,20 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
+                    if(currentTime==zohorMasa) {
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
+                                .setSmallIcon(R.mipmap.ic_launcher_round)
+                                .setContentTitle("Zohor")
+                                .setContentText("Telah masuk waktu Zohor bagi kawasan Kuala Lumpur & sewaktu dengannya.")
+                                .setAutoCancel(true)
+                                .setStyle(new NotificationCompat.BigTextStyle()
+                                        .bigText("Telah masuk waktu Zohor bagi kawasan Kuala Lumpur & sewaktu dengannya."))
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-                }
-                else{
-
+                        NotificationManager notificationManager = (NotificationManager)
+                                getSystemService(NOTIFICATION_SERVICE);
+                        notificationManager.notify(0, builder.build());
+                    }
                 }
             }
         });
@@ -132,10 +177,20 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
+                    if(currentTime==asarMasa) {
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
+                                .setSmallIcon(R.mipmap.ic_launcher_round)
+                                .setContentTitle("Asar")
+                                .setContentText("Telah masuk waktu Asar bagi kawasan Kuala Lumpur & sewaktu dengannya.")
+                                .setAutoCancel(true)
+                                .setStyle(new NotificationCompat.BigTextStyle()
+                                        .bigText("Telah masuk waktu Asar bagi kawasan Kuala Lumpur & sewaktu dengannya."))
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-                }
-                else{
-
+                        NotificationManager notificationManager = (NotificationManager)
+                                getSystemService(NOTIFICATION_SERVICE);
+                        notificationManager.notify(0, builder.build());
+                    }
                 }
             }
         });
@@ -144,10 +199,20 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
+                    if(currentTime==maghribMasa) {
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
+                                .setSmallIcon(R.mipmap.ic_launcher_round)
+                                .setContentTitle("Maghrib")
+                                .setContentText("Telah masuk waktu Maghrib bagi kawasan Kuala Lumpur & sewaktu dengannya.")
+                                .setAutoCancel(true)
+                                .setStyle(new NotificationCompat.BigTextStyle()
+                                        .bigText("Telah masuk waktu Maghrib bagi kawasan Kuala Lumpur & sewaktu dengannya."))
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-                }
-                else{
-
+                        NotificationManager notificationManager = (NotificationManager)
+                                getSystemService(NOTIFICATION_SERVICE);
+                        notificationManager.notify(0, builder.build());
+                    }
                 }
             }
         });
@@ -156,14 +221,23 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
+                    if(currentTime==insyakMasa) {
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
+                                .setSmallIcon(R.mipmap.ic_launcher_round)
+                                .setContentTitle("Isyak")
+                                .setContentText("Telah masuk waktu Isyak bagi kawasan Kuala Lumpur & sewaktu dengannya.")
+                                .setAutoCancel(true)
+                                .setStyle(new NotificationCompat.BigTextStyle()
+                                        .bigText("Telah masuk waktu Isyak bagi kawasan Kuala Lumpur & sewaktu dengannya."))
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-                }
-                else{
-
+                        NotificationManager notificationManager = (NotificationManager)
+                                getSystemService(NOTIFICATION_SERVICE);
+                        notificationManager.notify(0, builder.build());
+                    }
                 }
             }
         });
-
     }
 
     public void openSettings() {
