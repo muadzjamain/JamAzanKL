@@ -5,7 +5,7 @@
     android:id="@+id/hmm"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/settings_back"
+    android:background="@drawable/setting_update"
     tools:context=".UserSettings_Activity">
 
     <TextView
@@ -61,7 +61,52 @@
         app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.694" />
+        app:layout_constraintVertical_bias="0.61" />
+
+    <TextView
+        android:id="@+id/to_tentangkami"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Tentang Kami"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <TextView
+        android:id="@+id/to_derma"
+        android:layout_width="138dp"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Derma Surau"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <TextView
+        android:id="@+id/to_notifikasi"
+        android:layout_width="130dp"
+        android:layout_height="31dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Notifikasi"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.354" />
 
     <TextView
         android:id="@+id/textView8"
@@ -91,66 +136,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
         tools:ignore="TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/to_tentangkami"
-        android:layout_width="134dp"
-        android:layout_height="30dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Tentang Kami"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.305"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
-
-    <TextView
-        android:id="@+id/to_derma"
-        android:layout_width="138dp"
-        android:layout_height="30dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Derma Surau"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.309"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528" />
-
-    <TextView
-        android:id="@+id/to_notifikasi"
-        android:layout_width="130dp"
-        android:layout_height="31dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Notifikasi"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.439" />
-
-    <TextView
-        android:id="@+id/to_ubahslide"
-        android:layout_width="115dp"
-        android:layout_height="31dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Ubah Slide"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.284"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
 
     <TextView
         android:id="@+id/to_editprofile"

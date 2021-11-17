@@ -63,7 +63,6 @@ public class UserSettings_Activity extends AppCompatActivity implements View.OnC
 
         Button to_main1 = findViewById(R.id.to_main1);
         TextView to_editprofile = findViewById(R.id.to_editprofile);
-        TextView to_ubahslide = findViewById(R.id.to_ubahslide);
         TextView to_notifikasi1 = findViewById(R.id.to_notifikasi);
         TextView to_derma1 = findViewById(R.id.to_derma);
         TextView to_tentangkami = findViewById(R.id.to_tentangkami);
@@ -72,7 +71,6 @@ public class UserSettings_Activity extends AppCompatActivity implements View.OnC
 
         to_main1.setOnClickListener((View.OnClickListener) this);
         to_editprofile.setOnClickListener((View.OnClickListener) this);
-        to_ubahslide.setOnClickListener((View.OnClickListener) this);
         to_notifikasi1.setOnClickListener((View.OnClickListener) this);
         to_derma1.setOnClickListener((View.OnClickListener) this);
         to_tentangkami.setOnClickListener((View.OnClickListener) this);
@@ -96,11 +94,6 @@ public class UserSettings_Activity extends AppCompatActivity implements View.OnC
             case R.id.to_editprofile:
                 Intent intent15 = new Intent(this, ProfileActivity.class);
                 startActivity(intent15);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                break;
-            case R.id.to_ubahslide:
-                Intent intent2 = new Intent(this, UbahSlide_Activity.class);
-                startActivity(intent2);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.to_notifikasi:
