@@ -21,6 +21,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
 import java.time.LocalDate;
 import java.time.chrono.HijrahDate;
@@ -47,11 +50,26 @@ public class DashboardAdmin extends AppCompatActivity {
     private String DatabaseDate = android.text.format.DateFormat.format("ddMMyyyy",dateCalendar).toString();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
+    SliderView sliderView;
+    int[] images = {R.drawable.mas1,
+            R.drawable.mas3,
+            R.drawable.mas8,
+            R.drawable.mas9,
+            R.drawable.mas11,
+            R.drawable.mas12};
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_admin);
+
+        sliderView = findViewById(R.id.image_slider);
+        SliderAdapter sliderAdapter = new SliderAdapter(images);
+        sliderView.setSliderAdapter(sliderAdapter);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+        sliderView.startAutoCycle();
 
         subuhMasa= findViewById(R.id.time_subuh);
         syurukMasa=findViewById(R.id.time_Syuruk);
@@ -110,6 +128,8 @@ public class DashboardAdmin extends AppCompatActivity {
                 openSettings();
             }
         });
+
+
         Calendar calendar= Calendar.getInstance();
         String currentDate= android.text.format.DateFormat.format("d MMMM yyyy",calendar).toString();
         TextView textViewDate = findViewById(R.id.normal_date);
