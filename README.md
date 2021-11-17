@@ -17,6 +17,6 @@ Jam Azan KL Application Java Version (USER)
 
 	3.	Username and Password - email: naxir34391@gyn5.com 	Password:123456789
 
-	4.  Username and Password for Admin - email: muadz.jamain@gmail.com  Password: 12356789
+	4.  	Username and Password for Admin - email: muadz.jamain@gmail.com  Password: 12356789
   
-  5.  Email used for database (firebase) - email: muadz.jamain@gmail.com 
+  	5.  	Email used for database (firebase) - email: muadz.jamain@gmail.com 
