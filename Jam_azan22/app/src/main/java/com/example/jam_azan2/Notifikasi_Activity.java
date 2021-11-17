@@ -103,6 +103,67 @@ public class Notifikasi_Activity extends AppCompatActivity {
                 }
             }
         });
+
+        switchSyuruk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+
+                }
+                else{
+
+                }
+            }
+        });
+
+        switchZohor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+
+                }
+                else{
+
+                }
+            }
+        });
+
+        switchAsar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+
+                }
+                else{
+
+                }
+            }
+        });
+
+        switchMaghrib.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+
+                }
+                else{
+
+                }
+            }
+        });
+
+        switchIsyak.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+
+                }
+                else{
+
+                }
+            }
+        });
+
     }
 
     public void openSettings() {
