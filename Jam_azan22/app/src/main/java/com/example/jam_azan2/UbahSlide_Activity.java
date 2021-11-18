@@ -32,10 +32,8 @@ public class UbahSlide_Activity extends AppCompatActivity {
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         sliderView.startAutoCycle();
-
-
-
         slideeditBut=findViewById(R.id.chgSlide);
+
         slideeditBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

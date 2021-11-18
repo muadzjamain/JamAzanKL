@@ -40,5 +40,6 @@ public class Slidechange extends AppCompatActivity {
 
 
 
+
     }
 }

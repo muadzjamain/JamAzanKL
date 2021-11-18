@@ -111,7 +111,7 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    if(currentTime==subuhMasa) {
+                    if(currentTime.equals(subuhMasa)) {
                         NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
                                 .setSmallIcon(R.mipmap.ic_launcher_round)
                                 .setContentTitle("Subuh")
@@ -133,7 +133,7 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    if(currentTime==syurukMasa) {
+                    if(currentTime.equals(syurukMasa)) {
                         NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
                                 .setSmallIcon(R.mipmap.ic_launcher_round)
                                 .setContentTitle("Syuruk")
@@ -155,7 +155,7 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    if(currentTime==zohorMasa) {
+                    if(currentTime.equals(zohorMasa)) {
                         NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
                                 .setSmallIcon(R.mipmap.ic_launcher_round)
                                 .setContentTitle("Zohor")
@@ -177,7 +177,7 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    if(currentTime==asarMasa) {
+                    if(currentTime.equals(asarMasa)) {
                         NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
                                 .setSmallIcon(R.mipmap.ic_launcher_round)
                                 .setContentTitle("Asar")
@@ -199,7 +199,7 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    if(currentTime==maghribMasa) {
+                    if(currentTime.equals(maghribMasa)) {
                         NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
                                 .setSmallIcon(R.mipmap.ic_launcher_round)
                                 .setContentTitle("Maghrib")
@@ -221,7 +221,7 @@ public class Notifikasi_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    if(currentTime==insyakMasa) {
+                    if(currentTime.equals(insyakMasa)) {
                         NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
                                 .setSmallIcon(R.mipmap.ic_launcher_round)
                                 .setContentTitle("Isyak")

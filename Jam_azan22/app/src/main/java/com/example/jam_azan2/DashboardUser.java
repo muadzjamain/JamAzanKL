@@ -40,7 +40,6 @@ public class DashboardUser extends AppCompatActivity {
     private Button to_settings1;
     private FirebaseDatabase firebaseDatabase;
 
-
     private TextView subuhMasa;
     private TextView syurukMasa;
     private TextView zohorMasa;
@@ -94,14 +93,7 @@ public class DashboardUser extends AppCompatActivity {
                 String asar1 = (String) dataSnapshot.child("Asar").getValue();
                 String maghrib1 = (String) dataSnapshot.child("Maghrib").getValue();
                 String insyak1 = (String) dataSnapshot.child("Isyak").getValue();
-//
-//                Toast.makeText(DashboardUser.this, Subuh1, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(DashboardUser.this, syuruk1, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(DashboardUser.this, zohor1, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(DashboardUser.this, asar1, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(DashboardUser.this, maghrib1, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(DashboardUser.this, insyak1, Toast.LENGTH_SHORT).show();
-//
+
                 subuhMasa.setText(Subuh1);
                 syurukMasa.setText(syuruk1);
                 zohorMasa.setText(zohor1);
@@ -119,11 +111,6 @@ public class DashboardUser extends AppCompatActivity {
         String languageToLoad  = "ms"; // your language
         Locale locale = new Locale(languageToLoad);
         Locale.setDefault(locale);
-//        Configuration config = new Configuration();
-//        config.locale = locale;
-//        getBaseContext().getResources().updateConfiguration(config,
-//                getBaseContext().getResources().getDisplayMetrics());
-//        this.setContentView(R.layout.activity_dashboard_user);
 
         Calendar calendar= Calendar.getInstance();
         String currentDate= android.text.format.DateFormat.format("d MMMM yyyy",calendar).toString();
@@ -148,11 +135,6 @@ public class DashboardUser extends AppCompatActivity {
         String islamicDate = formatter.format(hijrahDate); // 07/03/1439
         TextView AZANView = findViewById(R.id.islamic_date);
         AZANView.setText(islamicDate);
-
-//        Calendar islamic = Calendar.getInstance();
-//        String islamicDate = android.text.format.DateFormat.format("dd MMMM yyyy", islamic).toString();
-//        TextView AZANView = findViewById(R.id.islamic_date);
-//        AZANView.setText(islamicDate);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
