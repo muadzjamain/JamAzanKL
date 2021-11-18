@@ -54,10 +54,13 @@ public class DashboardUser extends AppCompatActivity {
 
     SliderView sliderView;
     int[] images = {R.drawable.mas1,
+            R.drawable.qq1,
             R.drawable.mas3,
             R.drawable.mas8,
+            R.drawable.qq3,
             R.drawable.mas9,
             R.drawable.mas11,
+            R.drawable.qq2,
             R.drawable.mas12};
 
 
