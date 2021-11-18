@@ -98,11 +98,6 @@ public class AdminSettings_Activity extends AppCompatActivity implements View.On
                 startActivity(intent15);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
-            case R.id.to_ubahslide:
-                Intent intent2 = new Intent(this, UbahSlide_Activity.class);
-                startActivity(intent2);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                break;
             case R.id.to_notifikasi:
                 Intent intent3 = new Intent(this, Notifikasi_Activity.class);
                 startActivity(intent3);
