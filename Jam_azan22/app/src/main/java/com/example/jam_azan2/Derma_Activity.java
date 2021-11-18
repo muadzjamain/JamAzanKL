@@ -190,7 +190,9 @@ public class Derma_Activity extends AppCompatActivity {
     }
 
     public void openSettings() {
-        onBackPressed();
+        Intent intent = new Intent(this, UserSettings_Activity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }
 

@@ -7,9 +7,13 @@
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24385964912280703" />
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_dashboard_user.xml" value="0.23026315789473684" />
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_notifikasi.xml" value="0.23026315789473684" />
+        <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_payment_details.xml" value="0.23026315789473684" />
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_profile.xml" value="0.23026315789473684" />
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_settings_user.xml" value="0.45" />
+        <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_slidechange.xml" value="0.23026315789473684" />
+        <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_ubah_slide1.xml" value="0.23026315789473684" />
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_update_password.xml" value="0.23026315789473684" />
+        <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan KL/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/slider_item.xml" value="0.23026315789473684" />
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_azan_admin.xml" value="0.20697463768115942" />
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_dashboard_admin.xml" value="0.23026315789473684" />
         <entry key="..\:/Users/jamain.johari/Desktop/App Jam Azan/Master Jam Azan KL/Jam_azan22/app/src/main/res/layout/activity_dashboard_user.xml" value="0.23026315789473684" />
@@ -23,13 +27,9 @@
         <entry key="..\:/Users/veena/Desktop/Master LOL/Jam_azan22/app/src/main/res/layout/slider_item.xml" value="0.1" />
         <entry key="..\:/Users/veena/Desktop/Master/Jam_azan22/app/src/main/res/layout/activity_dashboard_admin.xml" value="0.264" />
         <entry key="..\:/Users/veena/Desktop/Master/Jam_azan22/app/src/main/res/layout/activity_dashboard_user.xml" value="0.4" />
-        <entry key="..\:/Users/veena/Desktop/Mastrytry again/Jam_azan22/app/src/main/res/layout/activity_dashboard_admin.xml" value="0.234375" />
-        <entry key="..\:/Users/veena/Desktop/Mastrytry again/Jam_azan22/app/src/main/res/layout/activity_dashboard_user.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/veena/Desktop/Mastrytry again/Jam_azan22/app/src/main/res/layout/activity_derma.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/veena/Desktop/Mastrytry again/Jam_azan22/app/src/main/res/layout/activity_payment_details.xml" value="0.2" />
-        <entry key="..\:/Users/veena/Desktop/Mastrytry again/Jam_azan22/app/src/main/res/layout/activity_settings_admin.xml" value="0.165625" />
         <entry key="..\:/Users/veena/Desktop/Mastrytry again/Jam_azan22/app/src/main/res/layout/activity_slidechange.xml" value="0.25" />
-        <entry key="..\:/Users/veena/Desktop/Mastrytry again/Jam_azan22/app/src/main/res/layout/activity_ubah_slide1.xml" value="0.25" />
         <entry key="..\:/Users/veena/Desktop/Mastrytry again/Jam_azan22/app/src/main/res/layout/activity_update_password.xml" value="0.25" />
       </map>
     </option>
