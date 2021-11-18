@@ -32,8 +32,8 @@ public class Derma_Activity extends AppCompatActivity {
     private static final int PAYPAL_REQUEST_CODE = 7171;
 
     private static PayPalConfiguration config =new PayPalConfiguration()
-            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX) //use sandbox we on test
-            .clientId(Config.PAYPAL_CLIENT_ID);
+            .environment(PayPalConfiguration.ENVIRONMENT_NO_NETWORK) //use sandbox we on test
+            .clientId("AfMbM5qU1wgC_DOIPwJejuVzyFnZe0W6YWXZbP62Cp-lNi19gMOITHegxrzHKhmztRrCJyuJBtjkdodZ");
 
     String amount="";
 
@@ -108,7 +108,7 @@ public class Derma_Activity extends AppCompatActivity {
                 amount="5";
                 PayPalPayment payPalPayment=new PayPalPayment(new BigDecimal(String.valueOf(amount)),"MYR",
                         "Donate for Azan",PayPalPayment.PAYMENT_INTENT_SALE);
-                Intent intent = new Intent(Derma_Activity.this, PaymentActivity.class);
+                Intent intent = new Intent(Derma_Activity.this, PaymentDetails.class);
                 intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
                 intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payPalPayment);
                 startActivityForResult(intent,PAYPAL_REQUEST_CODE);
@@ -174,7 +174,7 @@ public class Derma_Activity extends AppCompatActivity {
                 if (confirmation != null) {
                     try {
                         String paymentDetails = confirmation.toJSONObject().toString(4);
-                        startActivity(new Intent(this, PaymentActivity.class)
+                        startActivity(new Intent(this, PaymentDetails.class)
                                 .putExtra("PaymentDetails", paymentDetails)
                                 .putExtra("PaymentAmount", amount));
 
