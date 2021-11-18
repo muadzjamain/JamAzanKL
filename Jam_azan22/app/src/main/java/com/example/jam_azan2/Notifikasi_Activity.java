@@ -55,12 +55,12 @@ public class Notifikasi_Activity extends AppCompatActivity {
 
         Button to_settings2 = findViewById(R.id.to_settings2);
 
-        Switch switchSubuh = findViewById(R.id.subuhswitch);
-        Switch switchSyuruk = findViewById(R.id.syurukswitch);
-        Switch switchZohor = findViewById(R.id.zohorswitch);
-        Switch switchAsar = findViewById(R.id.asarswitch);
-        Switch switchMaghrib = findViewById(R.id.maghribswitch);
-        Switch switchIsyak = findViewById(R.id.isyakswitch);
+        Switch switchSubuh = (Switch) findViewById(R.id.subuhswitch);
+        Switch switchSyuruk = (Switch) findViewById(R.id.syurukswitch);
+        Switch switchZohor = (Switch) findViewById(R.id.zohorswitch);
+        Switch switchAsar = (Switch) findViewById(R.id.asarswitch);
+        Switch switchMaghrib = (Switch) findViewById(R.id.maghribswitch);
+        Switch switchIsyak = (Switch) findViewById(R.id.isyakswitch);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel("My Notification", "My Notification",NotificationManager.IMPORTANCE_DEFAULT);
@@ -109,7 +109,7 @@ public class Notifikasi_Activity extends AppCompatActivity {
 
         switchSubuh.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton cb, boolean isChecked) {
                 if(isChecked){
                     if(currentTime.equals(subuhMasa)) {
                         NotificationCompat.Builder builder = new NotificationCompat.Builder(Notifikasi_Activity.this, "My Notification")
@@ -124,6 +124,9 @@ public class Notifikasi_Activity extends AppCompatActivity {
                         NotificationManager notificationManager = (NotificationManager)
                                 getSystemService(NOTIFICATION_SERVICE);
                         notificationManager.notify(0, builder.build());
+                    }
+                    else{
+
                     }
                 }
             }

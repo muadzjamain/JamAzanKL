@@ -94,7 +94,6 @@ public class RegistrationActivity extends AppCompatActivity {
                                 sendUserData();
                                 //firebaseAuth.signOut();
                             }else{
-                                Toast.makeText(RegistrationActivity.this, "Daftar Masuk Gagal", Toast.LENGTH_SHORT).show();
                             }
 
                         }
@@ -166,7 +165,6 @@ public class RegistrationActivity extends AppCompatActivity {
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(RegistrationActivity.this, "Muat naik gagal", Toast.LENGTH_SHORT).show();
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
