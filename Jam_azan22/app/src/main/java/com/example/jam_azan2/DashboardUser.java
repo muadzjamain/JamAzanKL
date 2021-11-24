@@ -102,7 +102,7 @@ public class DashboardUser extends AppCompatActivity {
                 zohorMasa.setText(zohor1);
                 asarMasa.setText(asar1);
                 maghribMasa.setText(maghrib1);
-                insyakMasa.setText(insyak1);;
+                insyakMasa.setText(insyak1);
             }
 
             @Override

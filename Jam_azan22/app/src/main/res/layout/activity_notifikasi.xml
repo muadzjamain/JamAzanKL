@@ -50,21 +50,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.227" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/subuhswitch"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:checked="true"
-        android:showText="false"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#737373"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22"
-        tools:checked="true" />
+        app:layout_constraintVertical_bias="0.22" />
 
     <TextView
         android:id="@+id/syuruk"
@@ -81,19 +76,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.298" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/syurukswitch"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:checked="true"
-        android:textColor="#FDFDFD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296"
-        tools:checked="true" />
+        app:layout_constraintVertical_bias="0.296" />
 
     <TextView
         android:id="@+id/zohor"
@@ -110,19 +102,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.365" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/zohorswitch"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:checked="true"
-        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.362"
-        tools:checked="true" />
+        app:layout_constraintVertical_bias="0.362" />
 
     <TextView
         android:id="@+id/asar"
@@ -139,12 +128,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.436" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/asarswitch"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:checked="true"
-        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
@@ -167,18 +154,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.503" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/maghribswitch"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:checked="true"
-        android:textColor="#F8F5F5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:checked="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/isyak"
@@ -195,19 +179,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.57" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/isyakswitch"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:checked="true"
-        android:splitTrack="true"
-        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566"
-        tools:checked="true" />
+        app:layout_constraintVertical_bias="0.566" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
