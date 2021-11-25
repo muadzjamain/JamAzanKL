@@ -1,6 +1,6 @@
 # G03_38-JAM-AZAN-KL-APP
 
-Jam Azan KL Application Java Version (USER)
+Jam Azan KL Application Java Version
 
 	1.	Installation Manual
 		
@@ -15,7 +15,7 @@ Jam Azan KL Application Java Version (USER)
 
 	2.	Link of the Source Code - https://github.com/muadzjamain/JamAzanKL
 
-	3.	Username and Password - email: naxir34391@gyn5.com 	Password:123456789
+	3.	Username and Password for User - email: naxir34391@gyn5.com 	Password:123456789
 
 	4.  	Username and Password for Admin - email: muadz.jamain@gmail.com  Password: 12356789
   
