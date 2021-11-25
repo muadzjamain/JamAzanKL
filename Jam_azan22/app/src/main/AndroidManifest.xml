@@ -55,6 +55,13 @@
         <activity android:name=".DashboardAdmin" />
         <activity android:name=".DataAzan" />
         <activity android:name=".DataKalendarHijrah" />
+
+        <service android:name=".ServiceSubuh"></service>
+        <service android:name=".ServiceSyuruk"></service>
+        <service android:name=".ServiceZohor"></service>
+        <service android:name=".ServiceAsar"></service>
+        <service android:name=".ServiceMaghrib"></service>
+        <service android:name=".ServiceIsyak"></service>
     </application>
 
 </manifest>
