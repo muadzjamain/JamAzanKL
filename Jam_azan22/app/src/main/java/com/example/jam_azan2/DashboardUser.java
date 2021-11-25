@@ -3,7 +3,6 @@ package com.example.jam_azan2;
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,9 +28,7 @@ import com.smarteist.autoimageslider.SliderView;
 import java.time.LocalDate;
 import java.time.chrono.HijrahDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Locale;
 
 public class DashboardUser extends AppCompatActivity {

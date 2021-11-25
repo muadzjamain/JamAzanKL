@@ -23,10 +23,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jam_azan2">
         <activity
-            android:name=".PaymentDetails"
+            android:name="com.example.jam_azan2.PaymentDetails"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen_Activity"
+            android:name="com.example.jam_azan2.SplashScreen_Activity"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,34 +34,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login_Activity">
+        <activity android:name="com.example.jam_azan2.Login_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".TentangKami_Activity" />
-        <activity android:name=".AdminSettings_Activity" />
-        <activity android:name=".UserSettings_Activity" />
-        <activity android:name=".Notifikasi_Activity" />
-        <activity android:name=".Derma_Activity" />
-        <activity android:name=".UpdatePassword" />
-        <activity android:name=".UpdateProfile" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".ForgotPassword_Activity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".DashboardUser" />
-        <activity android:name=".DashboardAdmin" />
-        <activity android:name=".DataAzan" />
-        <activity android:name=".DataKalendarHijrah" />
+        <activity android:name="com.example.jam_azan2.TentangKami_Activity" />
+        <activity android:name="com.example.jam_azan2.AdminSettings_Activity" />
+        <activity android:name="com.example.jam_azan2.UserSettings_Activity" />
+        <activity android:name="com.example.jam_azan2.Notifikasi_Activity" />
+        <activity android:name="com.example.jam_azan2.Derma_Activity" />
+        <activity android:name="com.example.jam_azan2.UpdatePassword" />
+        <activity android:name="com.example.jam_azan2.UpdateProfile" />
+        <activity android:name="com.example.jam_azan2.ProfileActivity" />
+        <activity android:name="com.example.jam_azan2.ForgotPassword_Activity" />
+        <activity android:name="com.example.jam_azan2.RegistrationActivity" />
+        <activity android:name="com.example.jam_azan2.DashboardUser" />
+        <activity android:name="com.example.jam_azan2.DashboardAdmin" />
+        <activity android:name="com.example.jam_azan2.DataAzan" />
+        <activity android:name="com.example.jam_azan2.DataKalendarHijrah" />
 
-        <service android:name=".ServiceSubuh"></service>
-        <service android:name=".ServiceSyuruk"></service>
-        <service android:name=".ServiceZohor"></service>
-        <service android:name=".ServiceAsar"></service>
-        <service android:name=".ServiceMaghrib"></service>
-        <service android:name=".ServiceIsyak"></service>
+        <service android:name="com.example.jam_azan2.ServiceSubuh"></service>
+        <service android:name="com.example.jam_azan2.ServiceSyuruk"></service>
+        <service android:name="com.example.jam_azan2.ServiceZohor"></service>
+        <service android:name="com.example.jam_azan2.ServiceAsar"></service>
+        <service android:name="com.example.jam_azan2.ServiceMaghrib"></service>
+        <service android:name="com.example.jam_azan2.ServiceIsyak"></service>
     </application>
 
 </manifest>
